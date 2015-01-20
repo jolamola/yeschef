@@ -1,0 +1,22 @@
+<h1> Recipe details page </h1>
+<%= link_to "My Recipes", recipes_path %> | 
+<%= link_to "Edit Recipe", edit_recipe_path %> | 
+<%= link_to "Delete Recipe", recipe_path,
+	method: :delete,
+	data: {Confirm: "Are you sure you want to delete your recipe?"} %>
+<hr>
+<tbody>
+	<tr>
+		<td><%= @recipe.name %></td>
+		<td><%= @recipe.description %></td>
+		<td><%= @recipe.serving_size %></td>
+		<td><%= @recipe.equipment %></td>
+		<td><%= @recipe.ingredient %></td>
+		<td><%= @recipe.direction %></td>
+	</tr>
+</tbody>
+		
+		
+
+<%#= link_to "View all posts", posts_path %>
+

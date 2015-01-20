@@ -1,0 +1,56 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+
+/*#774F38 brn
+C5E0DC blue
+
+
+
+*/
+
+#myModalLabel {
+	font-size: 20px;
+	color: black;
+	text-align: center;
+}
+
+.partone {
+	background-color: #033D4B;
+	height: 400px;
+	// margin: 0px 10px;
+}
+
+.marginfix {
+	margin-bottom: 0px;
+	border: 0px;
+	border-radius: 0;
+}
+
+body{
+	color: green;
+	background-color: #222222
+}
+
+.navTextColor{
+	color: white;
+}
+
+.btn-custom {
+	color: red;
+	background-color: #00B5B9;
+	border-color: #2e6da4;
+}
+
+.btn-custom:hover {
+	background-color: #82FBF4;
+}
+
+.buttonOverride {
+	background-color: black;
+	color: dodgerblue;
+	border: 0px;
+}
+.buttonOverride:hover {
+	background-color:blue;
+}
