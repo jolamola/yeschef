@@ -1,0 +1,16 @@
+<%= form_for [@recipe, @component] do |f| %>
+	<div>
+		<%= f.label :cName, "Component Name:" %><br>
+		<%= f.text_field :cName%>
+	</div>
+	<div>
+		<%= f.label :ingredient, "Ingredient List:" %><br>
+		<%= f.text_area :ingredient, size: "80x10" %>
+	</div>	
+	<div>
+		<%= f.label :direction, "Cooking Directions:" %><br>
+		<%= f.text_area :direction, size: "80x10" %>
+	</div>			
+
+		<%= f.submit "Done" %>
+<% end %>

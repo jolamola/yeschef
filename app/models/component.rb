@@ -1,8 +1,9 @@
-# class Component
-#   include Mongoid::Document
-#   field :name, type: Integer
+class Component
+  include Mongoid::Document
+  field :cName, type: String
+  field :direction, type: String
+  field :ingredient, type: String
 
-#   embeds_many :ingredients
-
-#   embedded_in :recipe
-# end
+  embedded_in :recipe
+  
+end

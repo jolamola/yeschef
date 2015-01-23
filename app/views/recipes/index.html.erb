@@ -2,7 +2,7 @@
 
 <p><%=link_to "Add new", new_recipe_path %></p>
 
-<table>
+<table class = "table table-hover">
 	<thead>
 		<th>Dish Name</th>
 		<th>Serving Size</th>
@@ -11,17 +11,13 @@
  
 	<tbody>
 		<% @recipes.each do |r| %>
-		<tr>
-			<td><%= r.name %></td>
-			<td><%= r.serving_size %></td>
-			<td><%= r.description %></td>
-			<td><%= link_to "Details", recipe_path(r) %></td>
-			<td><%= link_to "Edit", edit_recipe_path(r) %></td>
-			<td><%= link_to "Delete", recipe_path(r), 
-			method: :delete,
-			data: {Confirm: "Are you sure you want to delete your recipe?"} %></td>
-		</tr>
-		<% end %>
+			<tr>
+				<td><%= r.rName %></td>
+				<td><%= r.serving_size %></td>
+				<td><%= r.description %></td>
+				<td><%= link_to "Show Details", recipe_path(r) %></td>
+			</tr>
+			<% end %>
 	</tbody>
 </table>	
 

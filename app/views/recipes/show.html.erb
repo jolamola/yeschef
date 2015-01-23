@@ -1,22 +1,54 @@
-<h1> Recipe details page </h1>
-<%= link_to "My Recipes", recipes_path %> | 
-<%= link_to "Edit Recipe", edit_recipe_path %> | 
-<%= link_to "Delete Recipe", recipe_path,
-	method: :delete,
-	data: {Confirm: "Are you sure you want to delete your recipe?"} %>
+<div>
+<h1> RECIPE details page </h1>
+<%= link_to "Back", recipes_path %> | 
+<%= link_to "Edit Info", edit_recipe_path %> | 
+<%= link_to "Add Component", new_recipe_component_path(@recipe) %> | 
+<%= link_to "Delete Recipe", recipe_path, method: :delete, data: {Confirm: "Are you sure you want to delete your recipe?"} %>
+</div>
+
+
 <hr>
+<h2> Recipe details showing </h2>
 <tbody>
+	<h4>Dish name: <%= @recipe.rName %></h4>
 	<tr>
-		<td><%= @recipe.name %></td>
-		<td><%= @recipe.description %></td>
-		<td><%= @recipe.serving_size %></td>
-		<td><%= @recipe.equipment %></td>
-		<td><%= @recipe.ingredient %></td>
-		<td><%= @recipe.direction %></td>
+		<td>Description: <%= @recipe.description %></td><br>
+		<td>Serving size: <%= @recipe.serving_size %></td><br>
+		<td>Suggested Equipment: <%= @recipe.equipment %></td><br>
 	</tr>
 </tbody>
-		
+<hr>
+
+  <% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>" role="alert-dismissible">
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+      <strong><%= value %></strong>
+    </div>
+  <% end %>
+
+<h2> Components showing... </h2>
+	<% @recipe.components.each do |c|%>
+		<div>
+			<div>
+				<strong>Component: </strong><%= c.cName %>
+			</div>
+			<div>
+				Ingredients:
+				<ul><%= simple_format c.ingredient %></ul>
+			</div>
+			<div>
+				Directions:
+				<ul><%= simple_format c.direction %></ul>
+			</div>
+			<div>
+				<%= link_to "Edit", edit_recipe_component_path(c.recipe.id, c.id) %>
+				<%= link_to "Delete", recipe_component_path(c.recipe.id, c.id), method: :delete, data: {Confirm: "Confirming that component will be deleted"} %>
+			</div>
+			<br>
+		</div>
+	<% end %>
+				
 		
 
-<%#= link_to "View all posts", posts_path %>
+
 

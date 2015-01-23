@@ -1,13 +1,87 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import url(http://fonts.googleapis.com/css?family=Ubuntu|Chelsea+Market);
 
 
 /*#774F38 brn
 C5E0DC blue
+3F2860 - purple
+90C5A9 - lt green
+7A9A95 - dk green
+EF6D3B - dk oj
+FA8B60 - lt oj
+393939 - dk grey
 
-
+629E7E - a green
+9DC568 - lt green
+1DA59B - TURQ - 1A948B
+F1EBDE - BEIGE
+493A3A - brownish
 
 */
+
+.body-margin {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+body{
+	color: #493A3A;
+	background-color: #f1ebde;
+	background-position: right;
+	background-repeat: no-repeat;
+	font-family: "ubuntu";
+}
+
+a {
+	color: #1DA59B;
+}
+a:hover {
+	color: #9DC568;
+	text-decoration: none;
+}
+
+// .colorBrown {
+// 	background-color: #493A3A;
+// }
+/*****************************************/
+/************** NAV BAR ******************/
+/*****************************************/
+.navbar-brand-font {
+	font-family: "chelsea market";
+	font-size: 30px;
+}
+.navbar-font {
+	font-family: "ubuntu";
+	font-size: 16px;
+	color: #493A3A;
+
+}
+.navbar-default {
+	background-color: #1A948B;
+}
+
+.navbar-default .navbar-brand {
+	color: #493A3A;
+}
+
+.navbar-default .navbar-brand:hover {
+	color: #F1EBDE;
+} 
+
+
+.navbar > .container .navbar-brand, 
+.navbar > .container-fluid .navbar-brand {
+	margin-left: -30px;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: #493A3A;
+}
+
+.navbar-default .navbar-nav > li > a:hover {
+	color: #F1EBDE;
+}
 
 #myModalLabel {
 	font-size: 20px;
@@ -15,26 +89,20 @@ C5E0DC blue
 	text-align: center;
 }
 
-.partone {
-	background-color: #033D4B;
-	height: 400px;
-	// margin: 0px 10px;
-}
 
 .marginfix {
 	margin-bottom: 0px;
-	border: 0px;
+	border-right: 0px;
+	border-bottom: 0px;
+	border-left: 0px;
+	border-color: #493A3A;
+	border-width: 2px;
 	border-radius: 0;
 }
 
-body{
-	color: green;
-	background-color: #222222
-}
-
-.navTextColor{
-	color: white;
-}
+/*****************************************/
+/************ Join Modal *****************/
+/*****************************************/
 
 .btn-custom {
 	color: red;

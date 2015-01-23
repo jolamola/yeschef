@@ -3,7 +3,7 @@
 <%= form_for @recipe do |r| %>
   
   Dish Name:
-  <br><%= r.text_field :name, size: "27" %><br>
+  <br><%= r.text_field :rName, size: "27" %><br>
 
   Description:
   <br><%= r.text_area :description, size: "30x2" %><br>
@@ -13,12 +13,6 @@
 
   Equipment:
   <br><%= r.text_field :equipment, size: "27" %><br>
-
-  Ingredients:
-  <br><%= r.text_area :ingredient, size: "30x20" %><br>
-
-  Directions:
-  <br><%= r.text_area :direction, size: "30x20" %><br>
 
 
   <br><%= r.submit 'Save Changes' %>

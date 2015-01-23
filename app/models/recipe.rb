@@ -1,15 +1,12 @@
 class Recipe
   include Mongoid::Document
-  field :name, type: String
+  include Mongoid::Timestamps
+  field :rName, type: String
   field :description, type: String
   field :serving_size, type: Integer 
   field :equipment, type: String
-  field :ingredient, type: String
-  field :direction, type: String
-  
-
-  #embeds_many :ingredients
-  # embeds_many :comments
 
   # embedded_in :username
+  embeds_many :components
+  accepts_nested_attributes_for :components
 end
