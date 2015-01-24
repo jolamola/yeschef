@@ -49,9 +49,15 @@ hr {
 .table tr  {
 	cursor: pointer;
 }
-// .colorBrown {
-// 	background-color: #493A3A;
-// }
+
+#loginbar > p {
+	color: #1DA59B;
+}
+
+#loginbar:hover {
+	color: #9DC568;
+	text-decoration: none;
+}
 /*****************************************/
 /************** NAV BAR ******************/
 /*****************************************/

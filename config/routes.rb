@@ -1,9 +1,16 @@
 Rails.application.routes.draw do
 
-root to: 'users#new'
+root to: 'users#index'
 
-resources :users
+get '/signup' => 'users#new', as: :signup
 
+get '/login' => 'sessions#new', as: :login
+post '/login' => 'sessions#create'
+get '/logout' => 'sessions#destroy', as: :logout
+
+
+
+resources :users 
 resources :recipes do
 	resources :components 
 

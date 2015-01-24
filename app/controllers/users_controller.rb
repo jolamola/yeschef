@@ -1,15 +1,18 @@
 class UsersController < ApplicationController
 
+	def index
+		@user = User.new
+	end
+
 	def new
 		@user = User.new
-		
 	end
 
 	def create
 		@user = User.new(user_params)
 
 		if @user.save
-			redirect_to recipes_path
+			redirect_to '/login'
 		else
 			render :new
 		end
