@@ -17,9 +17,6 @@ class ComponentsController < ApplicationController
 		end
 	end
 
-	def show
-	end
-
 	def edit
 		@component = @recipe.components.find(params[:id])
 	end
@@ -28,15 +25,14 @@ class ComponentsController < ApplicationController
 	def update
 		@component = @recipe.components.find(params[:id])
 
-    	if @recipe.components.update(component_params)
+    	if @component.update(component_params)
     		flash[:info] = "#{@component.cName} was updated!"
     		redirect_to recipe_path(@recipe.id)
 	    else
 	    	flash[:danger] = "No changes were made to #{@component.cName}"
-	      redirect_to recipe_path(@recipe.id)
+	      	redirect_to recipe_path(@recipe.id)
 	    end		
 	end
-
 
 	def destroy
 		@component = @recipe.components.find(params[:id])
@@ -44,8 +40,6 @@ class ComponentsController < ApplicationController
 		flash[:info] = "#{@component.cName} was deleted!"
 		redirect_to recipe_path(@recipe.id)
 	end
-
-
 
 	private
 

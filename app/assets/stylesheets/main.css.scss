@@ -27,7 +27,7 @@ F1EBDE - BEIGE
 }
 body{
 	color: #493A3A;
-	background-color: #f1ebde;
+	background-color: #F1EBDE;
 	background-position: right;
 	background-repeat: no-repeat;
 	font-family: "ubuntu";
@@ -41,6 +41,14 @@ a:hover {
 	text-decoration: none;
 }
 
+hr {
+	border-color: #493A3A;
+	margin-top: -5px;
+}
+
+.table tr  {
+	cursor: pointer;
+}
 // .colorBrown {
 // 	background-color: #493A3A;
 // }
@@ -90,7 +98,7 @@ a:hover {
 }
 
 
-.marginfix {
+.navbarOverride {
 	margin-bottom: 0px;
 	border-right: 0px;
 	border-bottom: 0px;
@@ -100,6 +108,16 @@ a:hover {
 	border-radius: 0;
 }
 
+.navbar-default .navbar-toggle {
+	border-color: #493A3A;
+}
+.navbar-default .navbar-toggle .icon-bar {
+	background-color: #493A3A;
+}
+
+.navbar-default .navbar-toggle:hover {
+	background-color: #F1EBDE;
+}
 /*****************************************/
 /************ Join Modal *****************/
 /*****************************************/

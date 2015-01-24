@@ -5,6 +5,8 @@ class Recipe
   field :description, type: String
   field :serving_size, type: Integer 
   field :equipment, type: String
+  
+  mount_uploader :photo, YeschefUploader
 
   # embedded_in :username
   embeds_many :components
