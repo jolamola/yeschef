@@ -1,11 +1,59 @@
 <%= render "partials/navbar" %>
 <div class = "center-width">
+<br>
 
-<p> user index page </p>
+<div class="car-container">
+	<div id="yeschef-caroursel" class="carousel slide" data-ride="carousel">
+	  <!-- Indicators -->
+	  <ol class="carousel-indicators
+	  ">
+	    <li data-target="#yeschef-caroursel" data-slide-to="0" class="active"></li>
+	    <li data-target="#yeschef-caroursel" data-slide-to="1"></li>
+	    <li data-target="#yeschef-caroursel" data-slide-to="2"></li>
+	  </ol>
+
+	  <!-- Wrapper for slides -->
+	  <div class="carousel-inner" role="listbox">
+	    
+	    <div class="item active carousel-size">
+	      <%= link_to image_tag("dinner.jpg", alt:"dinner image") %>
+	      <div class="carousel-caption">
+	        <h3> Hello there </h3>
+	      </div>
+	    </div>
+
+	    <div class="item carousel-size">
+	      <%=link_to image_tag("bread.jpg", alt:"bread image") %>
+	      <div class="carousel-caption">
+	        westside
+	      </div>
+	    </div>
+
+	        <div class="item carousel-size">
+	      <%=link_to image_tag("sandwich.jpg", alt:"sandwich image") %>
+	      <div class="carousel-caption">
+	        westside
+	      </div>
+	</div>
+
+    
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#yeschef-caroursel" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#yeschef-caroursel" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+
+
+</div>
 
 </div>
 
 
-
-
+</div>
 

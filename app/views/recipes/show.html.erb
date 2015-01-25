@@ -6,7 +6,7 @@
 		<%= link_to "Back", recipes_path %> | 
 		<%= link_to "Edit Info", edit_recipe_path %> | 
 		<%= link_to "Add Component", new_recipe_component_path(@recipe) %> | 
-		<%= link_to "Delete Recipe", recipe_path, method: :delete, data: {Confirm: "Are you sure you want to delete your recipe?"} %>
+		<%= link_to "Delete Recipe", recipe_path, method: :delete, data: {Confirm: "Your recipe will be permanently deleted"} %>
 		<br>
 		<br>
 </div>
@@ -25,7 +25,7 @@
   <% end %>
 </div>
 
-	<div class = "col-md-4">
+	<div class = "col-md-5">
 	<br>
 		<tr>
 			<td><%= image_tag @recipe.photo.url(:med), alt: "no image uploaded :(" %></td>
@@ -40,14 +40,14 @@
 
 
 
-	<div class = "col-md-8">
+	<div class = "col-md-7">
 		<h3> Components List:</h3>
 			<% @recipe.components.each do |c|%>
 				<div>
 					<div>
 						<strong>Component: </strong><%= c.cName %>
 						<br>
-						<%= link_to "Edit", edit_recipe_component_path(c.recipe, c) %> | <%= link_to "Delete", recipe_component_path(c.recipe.id, c.id), method: :delete, data: {Confirm: "Confirming that component will be deleted"} %>
+						<%= link_to "Edit", edit_recipe_component_path(c.recipe, c) %> | <%= link_to "Delete", recipe_component_path(c.recipe.id, c.id), method: :delete, data: {Confirm: "Your component will be permanently deleted"} %>
 					</div>				
 
 					<ul>

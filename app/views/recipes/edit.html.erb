@@ -1,26 +1,8 @@
 <%= render "partials/navbar" %>
 <div class = "center-width">
 
-<h1> Edit <%= @recipe.rName %> Information </h1>
+<h3> Edit <%= @recipe.rName %> Information </h3>
 
-<%= form_for @recipe do |r| %>
+<%= render "partials/recipe" %>
   
-  Dish Name:
-  <br><%= r.text_field :rName, size: "27" %><br>
-
-  Description:
-  <br><%= r.text_area :description, size: "30x2" %><br>
-  
-  Serving Size:
-  <br><%= r.text_field :serving_size, size: "27" %><br>
-
-  Equipment:
-  <br><%= r.text_field :equipment, size: "27" %><br>
-
-  Image:
-  <br><%= r.file_field :photo %><br>
-  
-  <br><%= r.submit 'Save Changes' %>
-  
-<% end %>
 </div>

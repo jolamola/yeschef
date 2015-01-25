@@ -1,17 +1,11 @@
 
-<%= form_for [@recipe, @component] do |f| %>
-	<div>
-		<%= f.label :cName, "Component Name:" %><br>
-		<%= f.text_field :cName%>
-	</div>
-	<div>
-		<%= f.label :ingredient, "Ingredient List:" %><br>
-		<%= f.text_area :ingredient, size: "80x10" %>
-	</div>	
-	<div>
-		<%= f.label :direction, "Cooking Directions:" %><br>
-		<%= f.text_area :direction, size: "80x10" %>
-	</div>			
+<%= bootstrap_form_for [@recipe, @component] do |f| %>
+	<strong>Component name:</strong>
+	<%= f.text_field :cName, hide_label: true%>
+	<strong>Ingredients:</strong>
+	<%= f.text_area :ingredient, hide_label: true, size: "80x10" %>
+	<strong>Directions:</strong>
+	<%= f.text_area :direction, hide_label: true, size: "80x10" %>	
 
-		<%= f.submit "Done" %>
+	<%= f.submit "Done" %>
 <% end %>

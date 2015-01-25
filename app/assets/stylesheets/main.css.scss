@@ -19,17 +19,23 @@ F1EBDE - BEIGE
  - brownish
 
 */
+.car-container {
+	width: 900px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 40px;
+	
+}
+
+.carousel-size {
+	height: 534px
+}
 
 .center-width {
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
 }
-
-// .center {
-// 	margin-left: auto;
-// 	margin-right: auto;
-// }
 .alert-link:hover {
 	color: #B68685;
 }

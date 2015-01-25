@@ -5,5 +5,8 @@ class Component
   field :ingredient, type: String
 
   embedded_in :recipe
+
+  validates :cName, presence: true, uniqueness: true
+  
   
 end

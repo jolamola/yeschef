@@ -40,7 +40,7 @@ class YeschefUploader < CarrierWave::Uploader::Base
     end
 
     version :med do
-      process :resize_to_fit => [340, 340]
+      process :resize_to_fit => [300, 300]
     end
 
   # Add a white list of extensions which are allowed to be uploaded.

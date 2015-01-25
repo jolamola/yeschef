@@ -1,7 +1,7 @@
 <%= render "partials/navbar" %>
 <div class = "center-width">
 
-<% if !current_user = nil? %>
+<% if current_user %>
 	<h1> My Recipes</h1>
 	<p><%=link_to "Add new", new_recipe_path %></p>
 	<hr>

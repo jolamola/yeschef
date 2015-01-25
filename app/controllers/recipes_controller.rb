@@ -1,6 +1,5 @@
 class RecipesController < ApplicationController
 	def index
-		# @recipes = Recipe.all.order(created_at: :desc)
 		if current_user
 			@recipes = current_user.recipes.all.order(created_at: :desc)
 		end
@@ -36,7 +35,6 @@ class RecipesController < ApplicationController
 		@recipe = Recipe.find(params[:id])
 
     	if @recipe.update(recipe_params)
-    		# flash[:info] = "#{@recipe.rName} was updated!"
     		redirect_to recipe_path
 	    end		
 	end
@@ -44,7 +42,6 @@ class RecipesController < ApplicationController
 	def destroy
 		@recipe = Recipe.find(params[:id])
 	    @recipe.destroy
-	    # flash[:info] = "#{@component.cName} was deleted!"
 	    redirect_to recipes_path
 	end
 
