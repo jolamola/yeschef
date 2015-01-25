@@ -13,7 +13,7 @@ class User
 
   validates :firstname, presence: true
   validates :lastname, presence: true
-  validates :email, presence: true, uniqueness: true
+  validates :email, presence: true, uniqueness: {case_sensitive: false}
   validates :password, confirmation: true
 
 end
