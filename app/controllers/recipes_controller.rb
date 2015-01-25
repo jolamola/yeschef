@@ -1,6 +1,9 @@
 class RecipesController < ApplicationController
 	def index
-		@recipes = Recipe.all.order(created_at: :desc)
+		# @recipes = Recipe.all.order(created_at: :desc)
+		if current_user
+			@recipes = current_user.recipes.all.order(created_at: :desc)
+		end
 	end
 
 	def show
@@ -13,6 +16,10 @@ class RecipesController < ApplicationController
 
 	def create
 		@recipe = Recipe.new(recipe_params)
+
+		@user = User.find(session[:user_id])
+		@recipe.user_id = @user.id
+		@recipe.save
 
 		if @recipe.save
 			redirect_to recipe_path(@recipe)
@@ -37,7 +44,7 @@ class RecipesController < ApplicationController
 	def destroy
 		@recipe = Recipe.find(params[:id])
 	    @recipe.destroy
-	    flash[:info] = "#{@component.cName} was deleted!"
+	    # flash[:info] = "#{@component.cName} was deleted!"
 	    redirect_to recipes_path
 	end
 

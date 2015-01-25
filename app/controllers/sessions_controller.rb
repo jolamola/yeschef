@@ -7,10 +7,12 @@ class SessionsController < ApplicationController
 		user = User.find_by(email: params[:user][:email])
 
 		if user && user.authenticate(params[:user][:password])
-			session[:user_id] = user.id 
+			session[:user_id] = user.id.to_s
 			redirect_to recipes_path
 		else
-			render :new
+			flash[:danger]= "Invalid login credentials."	
+			redirect_to login_path
+
 
 		end
 	end
@@ -18,7 +20,7 @@ class SessionsController < ApplicationController
 
 	def destroy
 		session[:user_id]=nil
-		redirect_to '/login'
+		redirect_to root_path
 	end
 
 

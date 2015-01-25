@@ -8,7 +8,10 @@ class Recipe
   
   mount_uploader :photo, YeschefUploader
 
-  # embedded_in :username
+  belongs_to :user
+  
   embeds_many :components
   accepts_nested_attributes_for :components
+
+  
 end

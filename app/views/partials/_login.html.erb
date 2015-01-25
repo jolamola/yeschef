@@ -1,0 +1,23 @@
+<div class="modal show">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Log In to yes!chef</h4>
+        </div>
+        <div class="modal-body">
+
+          <%= bootstrap_form_for :user, url: '/login' do |f| %>
+          <%= f.text_field :email, hide_label: :true, placeholder: "Email Address" %>
+          <%= f.password_field :password, hide_label: :true, placeholder: "Password" %>
+          <%=f.submit "login" %>
+          <span class="loginFlash"><%= flash[:danger] %></span>
+          <% end %> 
+          <br>
+        
+          <div class="modal-footer">
+            Not a chef? <a href="/signup"> Sign up now!</a>
+          </div>
+       
+      </div>
+    </div>
+  </div>

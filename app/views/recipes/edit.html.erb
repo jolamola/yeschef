@@ -1,3 +1,6 @@
+<%= render "partials/navbar" %>
+<div class = "center-width">
+
 <h1> Edit <%= @recipe.rName %> Information </h1>
 
 <%= form_for @recipe do |r| %>
@@ -20,3 +23,4 @@
   <br><%= r.submit 'Save Changes' %>
   
 <% end %>
+</div>

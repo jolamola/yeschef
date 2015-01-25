@@ -1,24 +1,24 @@
-<!-- Modal -->
-<div class="modal fade" id="joinModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      <div class="modal-header">
-     <!--    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
-        <h4 class="modal-title" id="myModalLabel">Join</h4>
-      </div>
-
-    
-      <div class="modal-body">
-
-        <%= form_for @user do |u| %>
-          <p><%= u.text_field :firstname, placeholder: "First name" %></p>
-          <p><%= u.text_field :lastname, placeholder: "Last name" %></p>
-          <p><%= u.email_field :email, placeholder: "Email" %></p>
-          <p><%= u.password_field :password, placeholder: "Password" %></p>
-          <p><%= u.password_field :password_confirmation, placeholder: "Confirm Password" %></p>
-          <%= u.submit "Join", class: "buttonOverride" %>
-        <% end %>
-      </div>  
-    </div>
-  </div>
+<div class="modal show">
+	<div class="modal-dialog">
+	  <div class="modal-content">
+	    <div class="modal-header">
+	      <h4 class="modal-title">Sign up for Yes!Chef</h4>
+	    </div>
+	    <div class="modal-body">
+	    	<%= bootstrap_form_for(@user) do |u| %>
+			<%=u.text_field :firstname, hide_label: :true, placeholder: "First name" %>
+		    <%=u.text_field :lastname, hide_label: :true, placeholder: "Last name" %>
+		    <%=u.email_field :email, hide_label: :true, placeholder: "Email" %>
+		    <%=u.password_field :password, hide_label: :true, placeholder: "Password" %>
+		    <%=u.password_field :password_confirmation, hide_label: :true, placeholder: "Confirm Password" %>
+		    <%= u.submit "Join" %>
+			<% end %>
+	    	<br>
+	    
+	        <div class="modal-footer">
+	          Already a chef? <a href="/login"> Login here!</a>
+	        </div>
+	   
+	  </div>
+	</div>
 </div>

@@ -9,9 +9,7 @@ class User
 
   has_secure_password
   
-  # embeds_many :recipes
-  # accepts_nested_attributes_for :recipes
-  # has_many :comments 
+  has_many :recipes
 
   validates :email, uniqueness: true
   validates :password, confirmation: true

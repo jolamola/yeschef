@@ -16,14 +16,22 @@ FA8B60 - lt oj
 9DC568 - lt green
 1DA59B - TURQ - 1A948B
 F1EBDE - BEIGE
-493A3A - brownish
+ - brownish
 
 */
 
-.body-margin {
+.center-width {
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+// .center {
+// 	margin-left: auto;
+// 	margin-right: auto;
+// }
+.alert-link:hover {
+	color: #B68685;
 }
 body{
 	color: #493A3A;
@@ -58,6 +66,40 @@ hr {
 	color: #9DC568;
 	text-decoration: none;
 }
+
+
+/*****************************************/
+/**************LOGIN MODAL ***************/
+/*****************************************/
+.modal-content {
+	width: 350px;
+}
+.modal-footer {
+	text-align: left;
+	padding-left: 0px;
+}
+.loginModalContainer {
+	margin-left: auto;
+	margin-right: auto;
+}
+.form-control {
+	width: 240px;
+}
+
+.loginFlash {
+	color: red;
+	padding-left: 5px;
+}
+.modal-dialog {
+	width: 350px;
+	margin-top: 100px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.modal-title {
+	color: #493A3A;
+}
 /*****************************************/
 /************** NAV BAR ******************/
 /*****************************************/
@@ -69,41 +111,40 @@ hr {
 	font-family: "ubuntu";
 	font-size: 16px;
 	color: #493A3A;
-
 }
 .navbar-default {
 	background-color: #1A948B;
 }
-
 .navbar-default .navbar-brand {
 	color: #493A3A;
 }
-
 .navbar-default .navbar-brand:hover {
 	color: #F1EBDE;
 } 
-
-
 .navbar > .container .navbar-brand, 
 .navbar > .container-fluid .navbar-brand {
 	margin-left: -30px;
 }
-
+.navbar-right {
+	padding-top: 15px
+}
+.navbar-default .navbar-nav > a {
+	color: #493A3A;
+}
+.navbar-default .navbar-nav > a:hover {
+	color: #F1EBDE;
+}
 .navbar-default .navbar-nav > li > a {
 	color: #493A3A;
 }
-
 .navbar-default .navbar-nav > li > a:hover {
 	color: #F1EBDE;
 }
-
 #myModalLabel {
 	font-size: 20px;
 	color: black;
 	text-align: center;
 }
-
-
 .navbarOverride {
 	margin-bottom: 0px;
 	border-right: 0px;
@@ -112,8 +153,8 @@ hr {
 	border-color: #493A3A;
 	border-width: 2px;
 	border-radius: 0;
-}
 
+}
 .navbar-default .navbar-toggle {
 	border-color: #493A3A;
 }
@@ -124,6 +165,9 @@ hr {
 .navbar-default .navbar-toggle:hover {
 	background-color: #F1EBDE;
 }
+
+
+
 /*****************************************/
 /************ Join Modal *****************/
 /*****************************************/

@@ -1,20 +1,7 @@
-<%= form_for @recipe do |r| %>
-  
-  Dish Name:
-  <br><%= r.text_field :rName, size: "27" %><br>
+<%= render "partials/navbar" %>
+<div class = "center-width">
+<h3> Recipe information </h3>
+<%= render "partials/recipe" %>
+</div>
 
-  Description:
-  <br><%= r.text_area :description, size: "30x2" %><br>
-  
-  Serving Size:
-  <br><%= r.text_field :serving_size, size: "27" %><br>
 
-  Suggested Equipment:
-  <br><%= r.text_field :equipment, size: "27" %><br>
-
-  Image:
-  <br><%= r.file_field :photo %><br>
-  
-  <br><%= r.submit 'Done' %>
-  
-<% end %>

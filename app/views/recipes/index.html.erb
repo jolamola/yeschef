@@ -1,24 +1,40 @@
-<h1> My Recipes</h1>
-<p><%=link_to "Add new", new_recipe_path %></p>
-<hr>
-<div class = "container-fluid">
-<table class = "table table-hover">
-	<thead>
-		<th class = "col-md-2"></th>
-		<th class = "col-md-2">Dish Name</th>
-		<th class = "col-md-2">Serving Size</th>
-		<th class = "col-md-6">Description</th>
-	</thead>
- 
-	<tbody>
-		<% @recipes.each do |r| %>
-			<tr onclick="window.location.href='<%= recipe_path(r) %>'">
-				<td class = "col-md-2"><%= image_tag r.photo.url(:small) %></td>
-				<td class = "col-md-2"><%= r.rName %></td>
-				<td class = "col-md-2"><%= r.serving_size %></td>
-				<td class = "col-md-6"><%= r.description.first(50) %></td>
-			</tr>
-			<% end %>
-	</tbody>
-</table>	
+<%= render "partials/navbar" %>
+<div class = "center-width">
+
+<% if !current_user = nil? %>
+	<h1> My Recipes</h1>
+	<p><%=link_to "Add new", new_recipe_path %></p>
+	<hr>
+
+	<div class = "container-fluid">
+		<table class = "table table-hover">
+			<thead>
+				<th class = "col-md-2"></th>
+				<th class = "col-md-2">Dish Name</th>
+				<th class = "col-md-2">Serving Size</th>
+				<th class = "col-md-6">Description</th>
+			</thead>
+		 
+			<tbody>
+				<% @recipes.each do |r| %>
+					<tr onclick="window.location.href='<%= recipe_path(r) %>'">
+					<td class = "col-md-2"><%= image_tag r.photo.url(:small) %></td>
+					<td class = "col-md-2"><%= r.rName %></td>
+					<td class = "col-md-2"><%= r.serving_size %></td>
+					<td class = "col-md-6"><%= r.description.first(50) %></td>
+					</tr>
+				<% end %>
+			</tbody>
+		</table>	
+	</div>
+
+<% else %>
+	<h3> Please login Chef! </h3>
+	<%= link_to "login", login_path %> | <%=link_to "signup", signup_path %>
+<% end %>
+
 </div>
+
+
+
+

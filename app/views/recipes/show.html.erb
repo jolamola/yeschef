@@ -1,4 +1,5 @@
-
+<%= render "partials/navbar" %>
+<div class = "center-width">
 
 <div>
 	<h1> <strong><%= @recipe.rName %></strong> </h1>
@@ -27,7 +28,7 @@
 	<div class = "col-md-4">
 	<br>
 		<tr>
-			<td><%= image_tag @recipe.photo.url(:med) %></td>
+			<td><%= image_tag @recipe.photo.url(:med), alt: "no image uploaded :(" %></td>
 			<br><br>
 			<td><strong>Description: </strong><%= @recipe.description %></td>
 			<br><br>
@@ -63,6 +64,7 @@
 			<% end %>
 
 	</div>
+</div>
 </div>
 				
 		

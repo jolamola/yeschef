@@ -1,7 +1,6 @@
 <nav class="navbar navbar-default navbarOverride navbar-font">
-  <div class="container-fluid body-margin">
-
-    <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="container-fluid center-width">
+    
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed black" data-toggle="collapse" data-target="#navbarCollapse">
         <span class="sr-only">Toggle navigation</span>
@@ -12,24 +11,23 @@
       <a class="navbar-brand navbar-brand-font" href="/">yes!chef</a>
       <br>
     </div>
-    <!-- Collect the nav links, forms, and other content for toggling -->
+
     <div class="collapse navbar-collapse" id="navbarCollapse">
-		<ul class="nav navbar-nav">
+		
+      <ul class="nav navbar-nav">
 	        <li><a href="/recipes">My Recipes</a></li>
 	    </ul>
 
       <ul class="nav navbar-nav navbar-right">
-        
           <% if current_user %>
-            Hello Chef <%= current_user.firstname %> | <%= link_to "Logout", logout_path %>
+             Chef <%= current_user.firstname %> | <%= link_to "logout", logout_path %>
           <% else %>
-             <%= link_to("Login", login_path) %> | <%=link_to("signup", signup_path) %>
-          <% end %>
-        
+             <%= link_to "login", login_path %> | <%= link_to "signup", signup_path %>
+          <% end %>  
       </ul>
 
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
+    </div>
+  </div>
 </nav>
 
 

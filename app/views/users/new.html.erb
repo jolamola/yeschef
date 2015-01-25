@@ -1,11 +1,1 @@
-<h1> sign up new account </h1>
-<div>
-  <%= form_for(@user) do |u| %>
-    <p><%=u.text_field :firstname, placeholder: "First name" %></p>
-    <p><%=u.text_field :lastname, placeholder: "Last name" %></p>
-    <p><%=u.email_field :email, placeholder: "Email" %></p>
-    <p><%=u.password_field :password, placeholder: "Password" %></p>
-    <p><%=u.password_field :password_confirmation, placeholder: "Confirm Password" %></p>
-    <%= u.submit "Join", class: "buttonOverride" %>
-  <% end %>
-</div>
+<%= render "partials/signup" %>
