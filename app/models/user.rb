@@ -11,7 +11,10 @@ class User
   
   has_many :recipes
 
-  validates :email, uniqueness: true
+  validates :firstname, presence: true
+  validates :lastname, presence: true
+  validates :email, presence: true, uniqueness: true
   validates :password, confirmation: true
+
 end
 	

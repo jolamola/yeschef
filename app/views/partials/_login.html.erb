@@ -1,15 +1,15 @@
-<div class="modal show">
+<div class="modal show greenBg">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title">Log In to yes!chef</h4>
+          <h4 class="modal-title">Log In to Yes!Chef</h4>
         </div>
         <div class="modal-body">
 
           <%= bootstrap_form_for :user, url: '/login' do |f| %>
           <%= f.text_field :email, hide_label: :true, placeholder: "Email Address" %>
           <%= f.password_field :password, hide_label: :true, placeholder: "Password" %>
-          <%=f.submit "login" %>
+          <%=f.submit "Login" %>
           <span class="loginFlash"><%= flash[:danger] %></span>
           <% end %> 
           <br>

@@ -16,21 +16,28 @@ FA8B60 - lt oj
 9DC568 - lt green
 1DA59B - TURQ - 1A948B
 F1EBDE - BEIGE
- - brownish
+ 493A3A- brownish
 
 */
+.greenBg {
+	background-color: #1DA59B;
+}
 .car-container {
 	width: 900px;
 	margin-right: auto;
 	margin-left: auto;
 	margin-top: 40px;
-	
 }
 
 .carousel-size {
 	height: 534px
 }
 
+.carousel-caption {
+	bottom: 360px;
+	left: 85px;
+	text-align: left;
+}
 .center-width {
 	width: 80%;
 	margin-left: auto;
@@ -119,7 +126,7 @@ hr {
 	color: #493A3A;
 }
 .navbar-default {
-	background-color: #1A948B;
+	background-color: #1DA59B;
 }
 .navbar-default .navbar-brand {
 	color: #493A3A;
