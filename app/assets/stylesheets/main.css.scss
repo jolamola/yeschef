@@ -30,7 +30,10 @@ hr {
 	border-color: #493A3A;
 	margin-top: -5px;
 }
-
+textarea.form-control {
+height: 200px;
+width: 400px;
+}
 /*****************************************/
 /*****************Carousel****************/
 /*****************************************/
@@ -44,7 +47,6 @@ hr {
 .carousel-size {
 	height: 534px
 }
-
 .carousel-caption {
 	bottom: 360px;
 	left: 85px;
@@ -66,6 +68,7 @@ hr {
  	vertical-align: middle;
  }
 
+
 /*****************************************/
 /********* Log In Sign up Modal **********/
 /*****************************************/
@@ -83,7 +86,6 @@ hr {
 .form-control {
 	width: 240px;
 }
-
 .loginFlash {
 	color: red;
 	padding-left: 5px;
