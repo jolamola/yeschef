@@ -1,6 +1,6 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
-// @import url("//fonts.googleapis.com/css?family=Ubuntu|Chelsea+Market");
+@import url("//fonts.googleapis.com/css?family=Ubuntu|Chelsea+Market");
 
 
 /*#774F38 brn
@@ -51,7 +51,7 @@ body{
 	background-color: #F1EBDE;
 	background-position: right;
 	background-repeat: no-repeat;
-	font-family: "ubuntu";
+	font-family: 'Ubuntu', sans-serif;
 }
 
 a {
@@ -117,11 +117,11 @@ hr {
 /************** NAV BAR ******************/
 /*****************************************/
 .navbar-brand-font {
-	font-family: "chelsea market";
+	font-family: 'Chelsea Market', cursive;
 	font-size: 30px;
 }
 .navbar-font {
-	font-family: "ubuntu";
+	font-family: 'Ubuntu', sans-serif;
 	font-size: 16px;
 	color: #493A3A;
 }
