@@ -29,8 +29,10 @@
 	</div>
 
 <% else %>
-	<h3> Please login Chef! </h3>
-	<%= link_to "login", login_path %> | <%=link_to "signup", signup_path %>
+	<script>
+		window.location = "/login"
+	</script>
+
 <% end %>
 
 </div>
