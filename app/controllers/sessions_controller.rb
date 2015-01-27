@@ -4,6 +4,9 @@ class SessionsController < ApplicationController
 	end
 
 	def create 
+		params.inspect
+		params[:user][:email] = params[:user][:email].downcase
+		params.inspect
 		user = User.find_by(email: params[:user][:email])
 
 		if user && user.authenticate(params[:user][:password])

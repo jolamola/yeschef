@@ -9,6 +9,8 @@ class UsersController < ApplicationController
 	end
 
 	def create
+		# params[:email] = params[:email].downcase
+
 		@user = User.new(user_params)
 
 		if @user.save
@@ -21,6 +23,7 @@ class UsersController < ApplicationController
 	private
 
 	def user_params
+		# params[:email] = params[:email].downcase
 		params.require(:user).permit(
 			:firstname, :lastname, :email, :password, :password_confirmation)
 	end
