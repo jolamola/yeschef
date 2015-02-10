@@ -1,3 +1,4 @@
+<!-- navbar partial -->
 <nav class="navbar navbar-default navbarOverride navbar-font">
   <div class="container-fluid center-width">
     
@@ -8,7 +9,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand navbar-brand-font" href="/">yes!chef</a>
+      
       <br>
     </div>
 
@@ -20,7 +21,7 @@
 
       <ul class="nav navbar-nav navbar-right">
           <% if current_user %>
-             Chef <%= current_user.firstname %> | <%= link_to "logout", logout_path %>
+             Chef <%= current_user.name %> | <%= link_to "logout", logout_path %>
           <% else %>
              <%= link_to "login", login_path %> | <%= link_to "signup", signup_path %>
           <% end %>  

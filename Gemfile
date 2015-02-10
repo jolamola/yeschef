@@ -45,9 +45,10 @@ gem 'carrierwave-mongoid', :require => 'carrierwave/mongoid'
 gem 'fog'         # required for Amazon S3
 gem 'mini_magick' # for post-upload image processing
 
+# adds figaro
 gem "figaro"
 
-# bootstrap form for forms
+# bootstrap_form for forms
 gem 'bootstrap_form'
 
 #heroku

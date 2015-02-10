@@ -7,6 +7,7 @@ class ComponentsController < ApplicationController
 		@components = @recipe.components
 	end
 
+	# create method for new recipe component
 	def create
 		@component = @recipe.components.new(component_params)
 		
@@ -17,11 +18,12 @@ class ComponentsController < ApplicationController
 		end
 	end
 
+	# edit for recipe component
 	def edit
 		@component = @recipe.components.find(params[:id])
 	end
 
-
+	#update for recipe component
 	def update
 		@component = @recipe.components.find(params[:id])
 
@@ -34,6 +36,7 @@ class ComponentsController < ApplicationController
 	    end		
 	end
 
+	# delete/destroy recipe component
 	def destroy
 		@component = @recipe.components.find(params[:id])
 		@component.destroy
@@ -43,10 +46,12 @@ class ComponentsController < ApplicationController
 
 	private
 
+	# params for recipe component
 	def component_params
 		params.require(:component).permit(:cName, :direction, :ingredient)
 	end	
 
+	# method used for before_action
 	def get_recipe
 		@recipe = Recipe.find(params[:recipe_id])
 	end

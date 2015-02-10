@@ -3,6 +3,7 @@ class SessionsController < ApplicationController
 	def new
 	end
 
+	# creates new session for user with authentication
 	def create 
 		params.inspect
 		params[:user][:email] = params[:user][:email].downcase
@@ -20,7 +21,7 @@ class SessionsController < ApplicationController
 		end
 	end
 
-
+	# logs user out of session/delete session
 	def destroy
 		session[:user_id]=nil
 		redirect_to root_path
