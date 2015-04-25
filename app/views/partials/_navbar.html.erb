@@ -10,18 +10,20 @@
         <span class="icon-bar"></span>
       </button>
       
+      <a class="navbar-brand navbar-brand-font" href="/">yes!chef</a>
+
       <br>
     </div>
 
     <div class="collapse navbar-collapse" id="navbarCollapse">
 		
-      <ul class="nav navbar-nav">
+      <ul class="nav navbar-nav ">
 	        <li><a href="/recipes">My Recipes</a></li>
 	    </ul>
 
       <ul class="nav navbar-nav navbar-right">
           <% if current_user %>
-             Chef <%= current_user.name %> | <%= link_to "logout", logout_path %>
+             Chef <%= current_user.firstname %> | <%= link_to "logout", logout_path %>
           <% else %>
              <%= link_to "login", login_path %> | <%= link_to "signup", signup_path %>
           <% end %>  
