@@ -1,6 +1,4 @@
-@import "bootstrap-sprockets";
-@import "bootstrap";
-@import url("//fonts.googleapis.com/css?family=Ubuntu|Chelsea+Market");
+
 
 
 /*****COLORS***********
@@ -11,13 +9,17 @@
 F1EBDE - BEIGE
 493A3A - brownish
 ***********************/
+$mainblue: #4A90E2;
 
 body{
-	color: #493A3A;
-	background-color: #F1EBDE;
-	background-position: right;
-	background-repeat: no-repeat;
+	color: $mainblue;
+	background: url("/images/restaurant_icons.png") ;
 	font-family: 'Ubuntu', sans-serif;
+}
+
+h1,h2,h3,h4,h5,h6 {
+	margin: 0;
+	padding: 0;
 }
 a {
 	color: #1DA59B;
@@ -66,8 +68,8 @@ textarea.form-control {
 	cursor: pointer;
 }
 .table > tbody > tr > td {
- 	vertical-align: middle;
- }
+	vertical-align: middle;
+}
 
 
 /*****************************************/

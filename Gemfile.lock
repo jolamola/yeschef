@@ -152,6 +152,8 @@ GEM
     fog-xml (0.1.1)
       fog-core
       nokogiri (~> 1.5, >= 1.5.11)
+    font-awesome-sass (4.3.2.1)
+      sass (~> 3.2)
     formatador (0.2.5)
     globalid (0.3.0)
       activesupport (>= 4.1.0)
@@ -279,6 +281,7 @@ DEPENDENCIES
   coffee-rails (~> 4.1.0)
   figaro
   fog
+  font-awesome-sass
   jbuilder (~> 2.0)
   jquery-rails
   mini_magick

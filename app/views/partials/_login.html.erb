@@ -1,25 +1,36 @@
 <!-- login form modal -->
 
-<div class="modal show greenBg">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h4 class="modal-title">Log In to Yes!Chef</h4>
-        </div>
-        <div class="modal-body">
+<div class="modal fade login-modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
 
-          <%= bootstrap_form_for :user, url: '/login' do |f| %>
-          <%= f.text_field :email, hide_label: :true, placeholder: "Email Address" %>
-          <%= f.password_field :password, hide_label: :true, placeholder: "Password" %>
-          <%=f.submit "Login" %>
-          <span class="loginFlash"><%= flash[:danger] %></span>
-          <% end %> 
-          <br>
-        
-          <div class="modal-footer">
-            Not a chef? <a href="/signup"> Sign up now!</a>
+      <div class="modal-header">
+        <h4 class="modal-title">Log In to Yes!Chef</h4>
+      </div>
+
+      <div class="modal-body">
+        <%= form_for :user, url: '/login' do |f| %>
+        <div class="form-group">
+
+          <div class="input-group formfield-space">
+            <span class="input-group-addon"><i class="fa fa-user"></i></span>
+            <%= f.text_field :email, hide_label: :true, placeholder: "Email Address", class: "form-control" %>
           </div>
-       
+          <div class="input-group">
+            <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+            <%= f.password_field :password, hide_label: :true, placeholder: "Password", class: "form-control" %>
+          </div>
+        </div><!-- LOGIN FORM FIELDS -->
+        
+        <%=f.submit "Login", class: "btn btn-login-modal" %>
+        <span class="loginFlash"><%= flash[:danger] %></span>
+        <% end %> 
+        <br>
+        
+        <div class="modal-footer">
+          Not a chef? <a href="/signup"> Sign up now!</a>
+        </div>
+
       </div>
     </div>
   </div>
