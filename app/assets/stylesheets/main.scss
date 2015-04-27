@@ -12,10 +12,14 @@ F1EBDE - BEIGE
 $mainblue: #4A90E2;
 $primarycolor: #333;
 
-body{
+body {
 	color: $primarycolor;
 	background: url("/images/restaurant_icons.png") ;
 	font-family: 'Ubuntu', sans-serif;
+}
+#error-body {
+	display: table;
+	margin: 100px auto;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -24,11 +28,11 @@ h1,h2,h3,h4,h5,h6 {
 }
 a {
 	color: $mainblue;
+	&:hover {
+		color: #fff;
+		text-decoration: none;
+	}
 }
-// a:hover {
-// 	color: #9DC568;
-// 	text-decoration: none;
-// }
 hr {
 	border-color: #493A3A;
 	margin-top: -5px;
@@ -36,6 +40,9 @@ hr {
 textarea.form-control {
 	height: 200px;
 	width: 400px;
+}
+#log-in-first {
+	color: #errorColor;
 }
 
 /*****************************************/

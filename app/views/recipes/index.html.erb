@@ -1,76 +1,57 @@
-    <div id="menu" class="hidden">
-    	<h3><a href="#">yes!chef</a></h3>
-        <ul>
-            <li><a href="#"><i class="fa fa-plus"></i>&nbsp;&nbsp;Add Recipe</a></li>
-            <li><a href="#"><i class="fa fa-sign-out"></i>&nbsp;Logout</a></li>
-        </ul>
-    </div>
-    <div id="content">
-
-        <!-- Navbar -->
-        <div id="menubar">
-            <div id="button">
-                <i id="menu-button" href="#menu-button" class="fa fa-bars fa-2x menu-icon"></i>
-            </div>
-        </div>
-
-        <!-- Content -->
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis laoreet libero, ac tristique quam sodales ac. Nam consequat consectetur dignissim. Nulla tincidunt gravida odio, et ornare tellus blandit in. Sed eget erat porttitor sem egestas tincidunt hendrerit id tellus. Fusce pharetra ipsum id purus luctus interdum. Vestibulum semper est varius dui sodales id porttitor diam ultrices. Ut eros arcu, rutrum non ornare vitae, varius id turpis. Maecenas scelerisque libero augue. Nam turpis lacus, pulvinar eu rutrum quis, ullamcorper eget turpis.</p>
-
-    </div>
-
-
-
-
-
-
-
-
-
-
-
-    <%#= render "partials/navbar" %>
-    <%#= render "partials/navbar2" %>
-
-
-
-
-<!-- <div class="slideout-menu">
-	<h3>yes!chef
-	<a href="#" class="slide-menu-toggle"><i class="fa fa-times fa-1x"></i></a></h3>
-	
-	<ul>
-		<li><i class="fa fa-plus"></i>&nbsp;&nbsp;Add Recipes</li>
-		<li><i class="fa fa-sign-out"></i>&nbsp;&nbsp;Logout</li>
-	</ul>
-
-</div> -->
-
-
-
-<!-- <div id="menu">
+<div id="menu" class="hidden">
 	<h3>yes!chef</h3>
+	<% if current_user %>
 	<ul>
-		<li><a href="#"><i class="fa fa-plus"></i>&nbsp;&nbsp;Add Recipe</a></li>
-		<li><a href="#"><i class="fa fa-sign-out"></i>&nbsp;&nbsp;Logout</a></li>
+		<li><a href="/recipes/new"><i class="fa fa-plus"></i>&nbsp;&nbsp;Add Recipe</a></li>
+		<li><a href="/logout"><i class="fa fa-sign-out"></i>&nbsp;Logout</a></li>
 	</ul>
+	<% else %>
+		<h4 style="color:#f22613"> please login </h4>
+	<% end %>
 </div>
 
-<div id="container">
-	<div id="topbar" class="slide"><i id="menu-button" href="#menu-button" class="fa fa-bars fa-2x menu-icon"></i></div>
-	<div id="content" class="slide">
-	<br><br><br><br><br><br><br>
-		<ul>
+<div id="content">
 
-			<li> CONTENT </li>
-			<li> CONTENT </li>
-			<li> CONTENT </li>
-			<li> CONTENT </li>
-			<li> CONTENT </li>
-			<li> CONTENT </li>
-			<li> CONTENT </li>
-			<li> CONTENT </li>
-			<li> CONTENT </li>
-		</ul>
+	<!-- Navbar -->
+	<div id="menubar">
+		<div id="button">
+			<i id="menu-button" href="#menu-button" class="fa fa-bars fa-2x menu-icon"></i>
+		</div>
 	</div>
-</div> -->
+
+
+		<% if current_user %>
+		<h1> My Recipes</h1>
+		<p><%=link_to "Add new", new_recipe_path %></p>
+		<!-- <hr> -->
+		<div class = "container-fluid">
+			<table class = "table table-hover">
+				<thead>
+					<th class = "col-md-2"></th>
+					<th class = "col-md-2">Dish Name</th>
+					<th class = "col-md-2">Serving Size</th>
+					<th class = "col-md-6">Description</th>
+				</thead>
+
+				<tbody>
+					<% @recipes.each do |r| %>
+					<!-- allows click on hover of recipe -->
+					<tr onclick="window.location.href='<%= recipe_path(r) %>'">
+						<td class = "col-md-2"><%= image_tag r.photo.url(:large) %></td>
+						<td class = "col-md-2"><%= r.rName %></td>
+						<td class = "col-md-2"><%= r.serving_size %></td>
+						<td class = "col-md-6"><%= r.description.first(50) %></td>
+					</tr>
+					<% end %>
+				</tbody>
+			</table>	
+		</div>
+		<% else %>
+		<h1 id="error-body"> You are not logged in, please log in or sign up!</h1>
+		<% end %>
+
+
+	<!-- Content -->
+
+
+</div>
