@@ -6,7 +6,7 @@
 		<li><a href="/logout"><i class="fa fa-sign-out"></i>&nbsp;Logout</a></li>
 	</ul>
 	<% else %>
-		<h4 style="color:#f22613"> please login </h4>
+	<h4 style="color:#f22613"> please login </h4>
 	<% end %>
 </div>
 
@@ -20,35 +20,16 @@
 	</div>
 
 
-		<% if current_user %>
-		<h1> My Recipes</h1>
-		<p><%=link_to "Add new", new_recipe_path %></p>
-		<!-- <hr> -->
-		<div class = "container-fluid">
-			<table class = "table table-hover">
-				<thead>
-					<th class = "col-md-2"></th>
-					<th class = "col-md-2">Dish Name</th>
-					<th class = "col-md-2">Serving Size</th>
-					<th class = "col-md-6">Description</th>
-				</thead>
-
-				<tbody>
-					<% @recipes.each do |r| %>
-					<!-- allows click on hover of recipe -->
-					<tr onclick="window.location.href='<%= recipe_path(r) %>'">
-						<td class = "col-md-2"><%= image_tag r.photo.url(:large) %></td>
-						<td class = "col-md-2"><%= r.rName %></td>
-						<td class = "col-md-2"><%= r.serving_size %></td>
-						<td class = "col-md-6"><%= r.description.first(50) %></td>
-					</tr>
-					<% end %>
-				</tbody>
-			</table>	
+	<% if current_user %>
+		<% @recipes.each do |r| %>
+		<div class="recipe">
+			<%= image_tag r.photo.url(:large), class: "image" %>
 		</div>
-		<% else %>
+	<% end %>
+
+	<% else %>
 		<h1 id="error-body"> You are not logged in, please log in or sign up!</h1>
-		<% end %>
+	<% end %>
 
 
 	<!-- Content -->
