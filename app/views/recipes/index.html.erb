@@ -1,10 +1,41 @@
-<%#= render "partials/navbar" %>
-<%= render "partials/navbar2" %>
+    <div id="menu" class="hidden">
+    	<h3><a href="#">yes!chef</a></h3>
+        <ul>
+            <li><a href="#"><i class="fa fa-plus"></i>&nbsp;&nbsp;Add Recipe</a></li>
+            <li><a href="#"><i class="fa fa-sign-out"></i>&nbsp;Logout</a></li>
+        </ul>
+    </div>
+    <div id="content">
+
+        <!-- Navbar -->
+        <div id="menubar">
+            <div id="button">
+                <i id="menu-button" href="#menu-button" class="fa fa-bars fa-2x menu-icon"></i>
+            </div>
+        </div>
+
+        <!-- Content -->
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent mollis laoreet libero, ac tristique quam sodales ac. Nam consequat consectetur dignissim. Nulla tincidunt gravida odio, et ornare tellus blandit in. Sed eget erat porttitor sem egestas tincidunt hendrerit id tellus. Fusce pharetra ipsum id purus luctus interdum. Vestibulum semper est varius dui sodales id porttitor diam ultrices. Ut eros arcu, rutrum non ornare vitae, varius id turpis. Maecenas scelerisque libero augue. Nam turpis lacus, pulvinar eu rutrum quis, ullamcorper eget turpis.</p>
+
+    </div>
 
 
 
 
-<div class="slideout-menu">
+
+
+
+
+
+
+
+    <%#= render "partials/navbar" %>
+    <%#= render "partials/navbar2" %>
+
+
+
+
+<!-- <div class="slideout-menu">
 	<h3>yes!chef
 	<a href="#" class="slide-menu-toggle"><i class="fa fa-times fa-1x"></i></a></h3>
 	
@@ -13,52 +44,33 @@
 		<li><i class="fa fa-sign-out"></i>&nbsp;&nbsp;Logout</li>
 	</ul>
 
+</div> -->
+
+
+
+<!-- <div id="menu">
+	<h3>yes!chef</h3>
+	<ul>
+		<li><a href="#"><i class="fa fa-plus"></i>&nbsp;&nbsp;Add Recipe</a></li>
+		<li><a href="#"><i class="fa fa-sign-out"></i>&nbsp;&nbsp;Logout</a></li>
+	</ul>
 </div>
 
+<div id="container">
+	<div id="topbar" class="slide"><i id="menu-button" href="#menu-button" class="fa fa-bars fa-2x menu-icon"></i></div>
+	<div id="content" class="slide">
+	<br><br><br><br><br><br><br>
+		<ul>
 
-
-
-
-<div class = "center-width">
-
-	<% if current_user %>
-	<h1> My Recipes</h1>
-	<p><%=link_to "Add new", new_recipe_path %></p>
-	<hr>
-
-	<div class = "container-fluid">
-		<table class = "table table-hover">
-			<thead>
-				<th class = "col-md-2"></th>
-				<th class = "col-md-2">Dish Name</th>
-				<th class = "col-md-2">Serving Size</th>
-				<th class = "col-md-6">Description</th>
-			</thead>
-
-			<tbody>
-				<% @recipes.each do |r| %>
-				<!-- allows click on hover of recipe -->
-				<tr onclick="window.location.href='<%= recipe_path(r) %>'">
-					<td class = "col-md-2"><%= image_tag r.photo.url(:small) %></td>
-					<td class = "col-md-2"><%= r.rName %></td>
-					<td class = "col-md-2"><%= r.serving_size %></td>
-					<td class = "col-md-6"><%= r.description.first(50) %></td>
-				</tr>
-				<% end %>
-			</tbody>
-		</table>	
+			<li> CONTENT </li>
+			<li> CONTENT </li>
+			<li> CONTENT </li>
+			<li> CONTENT </li>
+			<li> CONTENT </li>
+			<li> CONTENT </li>
+			<li> CONTENT </li>
+			<li> CONTENT </li>
+			<li> CONTENT </li>
+		</ul>
 	</div>
-
-	<% else %>
-
-	<script>
-		window.location = "/login"
-	</script>
-
-	<% end %>
-
-</div>
-
-
-
-
+</div> -->

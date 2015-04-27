@@ -10,9 +10,10 @@ F1EBDE - BEIGE
 493A3A - brownish
 ***********************/
 $mainblue: #4A90E2;
+$primarycolor: #333;
 
 body{
-	color: $mainblue;
+	color: $primarycolor;
 	background: url("/images/restaurant_icons.png") ;
 	font-family: 'Ubuntu', sans-serif;
 }
@@ -22,12 +23,12 @@ h1,h2,h3,h4,h5,h6 {
 	padding: 0;
 }
 a {
-	color: #1DA59B;
+	color: $mainblue;
 }
-a:hover {
-	color: #9DC568;
-	text-decoration: none;
-}
+// a:hover {
+// 	color: #9DC568;
+// 	text-decoration: none;
+// }
 hr {
 	border-color: #493A3A;
 	margin-top: -5px;

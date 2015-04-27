@@ -4,6 +4,7 @@ $navbar: #7D7D77;
 $alt: rgba(0,0,0,0.5);
 $mainfont: 'Ubuntu', sans-serif;
 $altFont: 'Chelsea Market', cursive;
+
 .center {
 	margin: 0 auto;
 }
@@ -18,8 +19,9 @@ $altFont: 'Chelsea Market', cursive;
 	border: 2px solid $beige;
 	padding: 4px 8px;
 	margin: 10px;
+	cursor: pointer;
 	&:hover {
-		color: rgba(0,0,0,0.5);
+		color: $mainblue;
 		background-color: $beige;
 		transition: all linear 0.2s;
 		-webkit-transition: all linear 0.2s;
@@ -27,54 +29,199 @@ $altFont: 'Chelsea Market', cursive;
 	}
 }
 
-/********** SLIDEOUT MENU *****************/
-.slideout-menu {
-	position: fixed;
-	top: 0;
-	left: -250px;
-	width: 200px;
-	height: 100%;
-	color: $beige;
-	background: #333;
-}
-
-.slideout-menu h3 {
-	position: relative;
-	font-family: $altFont;
-	padding: 15px 10px;
-	font-size: 2em;
-
-}
-
-.slideout-menu a {
+/********** SLIDEOUT MENU ALT2 *****************/
+#menubar {
+	width:100%;
+	background-color:$mainblue;
 	color: #fff;
-	&:hover {
-		color: $beige;
-	}
 }
-.slideout-menu a i {
-	position: absolute;
-	top: 15px;
-	right: 10px;
-	color: #fff;	
-	&:hover {
-		color: $mainblue;
-		transition: all linear 0.2s;
-		-webkit-transition: all linear 0.2s;
-		-moz-transition: all linear 0.2s;
-	}
+#menu, 
+#content {
+	display:inline;
+}
+#content {
+	width:100%;
+	z-index: 5;
+	position: fixed;
+	left: 0px;
+	height: 100%;
 }
 
-.slideout-menu ul {
+#menu {
+	background-color: #333;
+	float:left;
+	width: 200px;
+	height: 100vh;
+}
+
+#menu h3 {
+	font-size: 2em;
+	font-weight: bold;
+	margin: 10px 0 10px 10px;
+}
+
+#menu h3 a:hover {
+	color: #fff;
+	text-decoration: none;
+}
+
+#menu ul {
+	border-top: 1px solid white;
+	padding-top: 10px;
+	padding-left: 10px;
+}
+
+#menu ul li {
+	margin: 10px 0;
+}
+#menu ul li a {
 	list-style: none;
-	padding: 30px 10px;
-	font-size: 20px;
-	border-top: 1px solid $navbar;
+	font-size: 1.5em;
+	&:hover {
+		color: #fff;
+		text-decoration: none;
+	}
 }
 
-.slideout-menu li {
-	margin-bottom: 15px;
-}
+
+
+
+/********** SLIDEOUT MENU ALT *****************/
+// #menu {
+//     position: absolute;
+//     top:0px;
+//     left:0px;
+//     width: 200px;
+//     height: 100%;
+//     color: white;
+//     background: $navbar;
+//     // z-index: 10;
+
+// }
+
+// #menu h3 {
+// 	position: relative;
+// 	font-family: $altFont;
+// 	padding: 15px 10px;
+// 	font-size: 2.5em;	
+// }
+
+// #menu ul {
+// 	list-style: none;
+// 	padding: 20px;
+// }
+
+// #menu ul li {
+// 	font-size: 1.5em;
+// 	margin-bottom: 5px;
+// }
+
+// #menu ul li a {
+// 	color: $beige;
+// }
+
+// #menu ul li a:hover  {
+// 	color: #EEEEFA;
+// 	text-decoration: none;
+// }
+// #topbar{
+//     position: fixed;
+//     width:100%;
+//     top:0px;
+//     left:0px;
+//     line-height:65px;
+//     background:$alt;
+//     text-align:center;
+//     z-index: 1;
+// }
+// #container{
+//     width:100%;
+//     position: absolute;
+//     left:0px;
+//     top:0px;
+//     // z-index: 10;
+// }
+
+// #content{   
+// 	background: url("/images/restaurant_icons.png");
+//     padding:5px;
+//     height: 100vh;
+// }
+
+// .slide{
+//     -webkit-transition:all .2s linear;
+//     -webkit-transform: translate3d(0,0,0);
+// }
+
+// #container.active .slide{
+//     -webkit-transform: translate3d(200px,0,0);
+// }
+
+// #menu-button{
+//     float:left;
+//     line-height:20px;
+//     margin:10px;
+//     padding:10px;
+//     background:transparent;
+//     color:white;
+//     &:hover, &:focus {
+//     	background: #fff;
+//     	color: $alt;
+//     	text-decoration: none;
+//     	cursor: pointer;
+//     }
+// }
+
+
+
+/********** SLIDEOUT MENU *****************/
+// .slideout-menu {
+// 	position: fixed;
+// 	top: 0;
+// 	left: -250px;
+// 	width: 200px;
+// 	height: 100%;
+// 	color: $beige;
+// 	background: #333;
+// }
+
+// .slideout-menu h3 {
+// 	position: relative;
+// 	font-family: $altFont;
+// 	padding: 15px 10px;
+// 	font-size: 2em;
+
+// }
+
+// .slideout-menu a {
+// 	color: #fff;
+// 	&:hover {
+// 		color: $beige;
+// 	}
+// }
+// .slideout-menu a i {
+// 	position: absolute;
+// 	top: 15px;
+// 	right: 10px;
+// 	color: #fff;	
+// 	&:hover {
+// 		color: $mainblue;
+// 		transition: all linear 0.2s;
+// 		-webkit-transition: all linear 0.2s;
+// 		-moz-transition: all linear 0.2s;
+// 	}
+// }
+
+// .slideout-menu ul {
+// 	list-style: none;
+// 	padding: 30px 10px;
+// 	font-size: 20px;
+// 	border-top: 1px solid $navbar;
+// }
+
+// .slideout-menu li {
+// 	margin-bottom: 15px;
+// }
 
 // .slideout-menu .slide-menu-toggle {
 // 	position: absolute;

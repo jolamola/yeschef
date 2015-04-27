@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>yes!chef</title>
-  <%= favicon_link_tag '/hat.ico' %>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
+	<title>yes!chef</title>
+	<%= favicon_link_tag '/hat.ico' %>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+	<%= csrf_meta_tags %>
 
 </head>
 
@@ -13,29 +13,65 @@
 
 	<%= yield %>
 
-<script>
-	$(document).ready(function(){
+	<script>
+		$(document).ready(function(){
 
-		$(".slide-menu-toggle").on("click", function(event){
-			event.preventDefault();
+			$('#button').click( function() {
+				if ($('#menu').hasClass('hidden')) {
+					$('#menu').removeClass('hidden');
+					showPopout();
+				}
+				else {
+					$('#menu').addClass('hidden');
+					hidePopout();
+				}
+			});
 
-			var menu = $('.slideout-menu');
-			var menuWidth = $('.slideout-menu').width();
+			function showPopout() {
+				$('#content').animate(
+					{ left: $('#menu').width() }, 'fast', 
+					function() {
+						$('#button').html('<i id="menu-button" href="#menu-button" class="fa fa-times fa-2x menu-icon"></i>');
+					}
+					);
+			}
 
-			menu.toggleClass('open');
-
-			if(menu.hasClass('open')) {
-				menu.animate({
-					left: '0px'
-				});
-			} else {
-				menu.animate({
-					left: -menuWidth
-				}, 250);
+			function hidePopout() {
+				$('#content').animate(
+					{ left: 0 }, 'fast', 
+					function() {
+						$('#button').html('<i id="menu-button" href="#menu-button" class="fa fa-bars fa-2x menu-icon"></i>');
+					}
+					);
 			}
 		});
-	});
-</script>
+
+			// $('#menu-button').click(function(){
+			// 	$('#container').toggleClass('active');
+			// });
+
+
+
+		// $(".slide-menu-toggle").on("click", function(event){
+		// 	event.preventDefault();
+
+		// 	var menu = $('.slideout-menu');
+		// 	var menuWidth = $('.slideout-menu').width();
+
+		// 	menu.toggleClass('open');
+
+		// 	if(menu.hasClass('open')) {
+		// 		menu.animate({
+		// 			left: '0px'
+		// 		});
+		// 	} else {
+		// 		menu.animate({
+		// 			left: -menuWidth
+		// 		}, 250);
+		// 	}
+		// });
+
+	</script>
 
 </body>
 </html>
