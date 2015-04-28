@@ -1,13 +1,15 @@
+<div id="bg"></div>
 <div id="menu" class="hidden">
 	<h3>yes!chef</h3>
 	<% if current_user %>
 	<ul>
-		<li><a href="/recipes/new"><i class="fa fa-plus"></i>&nbsp;&nbsp;Add Recipe</a></li>
+		<li><button type="button" data-toggle="modal" data-target=".recipe-modal"><i class="fa fa-plus"></i>&nbsp;&nbsp;Add Recipe</button></li>
 		<li><a href="/logout"><i class="fa fa-sign-out"></i>&nbsp;Logout</a></li>
 	</ul>
 	<% else %>
-	<h4 style="color:#f22613"> please login </h4>
+	<h4 style="color:#f22613"> please login </h4> <!-- Message if user is not logged in. FIX: should route to LANDING PAGE -->
 	<% end %>
+	<%= render "partials/recipe" %>
 </div>
 
 <div id="content">
@@ -17,22 +19,31 @@
 		<div id="button">
 			<i id="menu-button" href="#menu-button" class="fa fa-bars fa-2x menu-icon"></i>
 		</div>
+		<h3>Chef <%= current_user.firstname %></h3>
 	</div>
 
+	<div id="recipe-content">
 
-	<% if current_user %>
-		<% @recipes.each do |r| %>
-		<div class="recipe">
-			<%= image_tag r.photo.url(:large), class: "image" %>
+		<div class="container">	
+			<div class="row">
+
+				<% if current_user %>
+				<% @recipes.each do |r| %>
+
+				<div class="col-md-4 col-sm-6 col-xs-12">
+					<h4><%= r.rName %></h4>
+					<a href="<%= recipe_path(r) %>"><%= image_tag r.photo.url(:med), class: "image" %></a>
+				</div>
+
+				<% end %>
+
+				<% else %>
+					<h1 id="error-body"> You are not logged in, please log in or sign up!</h1>
+				<% end %>
+
+
+			</div>
 		</div>
-	<% end %>
-
-	<% else %>
-		<h1 id="error-body"> You are not logged in, please log in or sign up!</h1>
-	<% end %>
-
-
-	<!-- Content -->
-
+	</div>
 
 </div>

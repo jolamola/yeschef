@@ -36,7 +36,7 @@ class YeschefUploader < CarrierWave::Uploader::Base
   #   process :resize_to_fit => [50, 50]
   # end
     version :large do
-      process :resize_to_fit => [500, 500]
+      process :resize_to_fit => [400, 400]
     end
 
     version :med do

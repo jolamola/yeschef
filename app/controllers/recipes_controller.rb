@@ -4,6 +4,7 @@ class RecipesController < ApplicationController
 	def index
 		if current_user
 			@recipes = current_user.recipes.all.order(created_at: :desc)
+			@recipe = Recipe.new
 		end
 	end
 
@@ -13,9 +14,9 @@ class RecipesController < ApplicationController
 	end
 
 	# new method for new recipe
-	def new
-		@recipe = Recipe.new
-	end
+	# def new
+	# 	@recipe = Recipe.new
+	# end
 
 	# creates new recipe then redirects to recipe to add components
 	def create

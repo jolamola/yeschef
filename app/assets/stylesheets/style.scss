@@ -6,7 +6,13 @@ $mainfont: 'Ubuntu', sans-serif;
 $altFont: 'Chelsea Market', cursive;
 $errorColor: #F22613;
 
-
+#bg {
+	background: url("/images/restaurant_icons.png") top center;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 2000px;
+}
 .center {
 	margin: 0 auto;
 }
@@ -33,27 +39,41 @@ $errorColor: #F22613;
 
 /********** SLIDEOUT MENU ALT2 *****************/
 #menubar {
+	// display:inline-block;
 	width:100%;
 	background-color:$mainblue;
 	color: #fff;
+	position: fixed;
+	top: 0;
+	z-index: 1;
 }
+
+#menubar h3 {
+	// display: inline-block;
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+
 #menu, 
 #content {
 	display:inline;
 }
 #content {
 	width:100%;
-	z-index: 5;
-	position: fixed;
+	position: absolute;
 	left: 0px;
-	height: 100%;
+	overflow-x: hidden;
 }
 
 #menu {
+	position: fixed;
+	top: 0;
 	background-color: #333;
 	float:left;
 	width: 200px;
-	height: 100vh;
+	height: 100%;
+	z-index: 1;
 }
 
 #menu h3 {
@@ -86,8 +106,9 @@ $errorColor: #F22613;
 	}
 }
 
-/************ LOGIN PAGE ****************/
+/************ LANDING PAGE ****************/
 #title {
+	color: $mainblue;
 	font-weight: bold;
 	font-size: 5em;
 	text-align: center;
@@ -122,15 +143,17 @@ $errorColor: #F22613;
 }
 
 .btn-login-modal {
+	color: #fff;
+	background: $mainblue!important;
 	width: 100px;
 	background: transparent;
-	border: 1px solid #ccc;
+	border: 1px solid $mainblue;
 	outline: none;
 	&:hover, &:focus {
-		color: #fff;
-		background: $mainblue;
+		color: $mainblue!important;
+		background: #fff!important;
 		border-color: $mainblue;
-		transition: all ease-in 0.2s;
+		transition: all linear 0.2s;
 		outline: none;
 	}
 }
@@ -140,5 +163,16 @@ $errorColor: #F22613;
 }
 
 .image {
-	border: 2px solid red;
+	margin-top: 3px;
+	margin-bottom: 20px;
+	border: 1px solid #000;
+	box-shadow: 0 3px 9px rgba(0,0,0,.5);
+	&:hover {
+		opacity: .8;
+	}
+}
+
+#recipe-content {
+	margin-top: 100px;
+
 }

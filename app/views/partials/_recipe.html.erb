@@ -1,22 +1,36 @@
-<!-- recipe form -->
+<!-- recipe form modal -->
 
-<%= bootstrap_form_for @recipe do |r| %>
-  
-  <strong>Dish Name:</strong>
-  <%= r.text_field :rName, hide_label: :true %>
+<div class="modal fade recipe-modal">
+  <div class="modal-dialog">
+    <div class="modal-content">
 
-  <strong>Description:</strong>
-  <%= r.text_field :description, hide_label: :true %>
-  
-  <strong>Serving Size:</strong>
-  <%= r.text_field :serving_size, hide_label: :true%>
+      <div class="modal-header">
+        <h4 class="modal-title">Add New Recipe</h4>
+      </div>
 
-  <strong>Suggested Equipment:</strong>
-  <%= r.text_field :equipment, hide_label: :true%>
+      <div class="modal-body">
+        <%= form_for @recipe do |r| %>
 
-  <strong>Image:</strong>
-  <%= r.file_field :photo, hide_label: :true %>
-  
-  <%= r.submit 'Done' %>
-  
-<% end %>
+        <strong>Dish Name:</strong>
+        <%= r.text_field :rName, hide_label: :true, class: "recipe-field" %>
+
+        <strong>Description:</strong>
+        <%= r.text_field :description, hide_label: :true %>
+
+        <strong>Serving Size:</strong>
+        <%= r.text_field :serving_size, hide_label: :true%>
+
+        <strong>Suggested Equipment:</strong>
+        <%= r.text_field :equipment, hide_label: :true%>
+
+        <strong>Image:</strong>
+        <%= r.file_field :photo, hide_label: :true %>
+
+        <%= r.submit 'Done' %>
+
+        <% end %>
+
+      </div>
+    </div>
+  </div>
+</div>

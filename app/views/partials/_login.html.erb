@@ -21,15 +21,13 @@
             <%= f.password_field :password, hide_label: :true, placeholder: "Password", class: "form-control" %>
           </div>
         </div><!-- LOGIN FORM FIELDS -->
-        
-        <%=f.submit "Login", class: "btn btn-login-modal" %>
-        <span class="loginFlash"><%= flash[:danger] %></span>
-        <% end %> 
-        <br>
-        
         <div class="modal-footer">
-          Not a chef? <a href="/signup"> Sign up now!</a>
+          <%=f.submit "Login", class: "btn btn-login-modal" %>
+          <span class="loginFlash"><%= flash[:danger] %></span>
         </div>
+
+
+        <% end %>      
 
       </div>
     </div>
