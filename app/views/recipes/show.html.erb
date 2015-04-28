@@ -4,21 +4,15 @@
 	<h3>yes!chef</h3>
 	<% if current_user %>
 	<ul>
-		<li><span class="fa fa-chevron-left">
-			<%= link_to " Back", recipes_path, class: "recipe-menu-link" %>
-		</span></li>
+		<li><a href="/recipeHome"><i class="fa fa-chevron-left"></i>&nbsp;&nbsp;Back</a></li>
 
-		<li><span class="fa fa-pencil">
-			<%= link_to " Edit Info", edit_recipe_path, class: "recipe-menu-link" %>
-		</span></li>
+		<li><button type="button" data-toggle="modal" data-target=".recipe-modal"><i class="fa fa-pencil"></i>&nbsp;Edit Recipe</button></li>
 
 		<li><span class="fa fa-trash-o">
 			<%= link_to " Delete Recipe", recipe_path, class: "recipe-menu-link", method: :delete, data: {Confirm: "Your recipe will be permanently deleted"} %>
 		</span></li>
 
-		<li><a href="/logout">
-			<i class="fa fa-sign-out"></i>&nbsp;Logout
-		</a></li>
+		<li><a href="/logout"><i class="fa fa-sign-out"></i>&nbsp;Logout</a></li>
 	</ul>
 	<% else %>
 	<h4 style="color:#f22613"> please login </h4> <!-- Message if user is not logged in. FIX: should route to LANDING PAGE -->
