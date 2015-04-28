@@ -1,24 +1,36 @@
 <!-- sign up form modal -->
 <div class="modal fade signup-modal">
 	<div class="modal-dialog">
-	  <div class="modal-content">
-	    <div class="modal-header">
-	      <h4 class="modal-title">Sign up for Yes!Chef</h4>
-	    </div>
-	    <div class="modal-body">
-	    	<%= bootstrap_form_for :user, url: "/signup" do |u| %>
-			<%=u.text_field :firstname, hide_label: :true, placeholder: "First name" %>
-		    <%=u.text_field :lastname, hide_label: :true, placeholder: "Last name" %>
-		    <%=u.email_field :email, hide_label: :true, placeholder: "Email" %>
-		    <%=u.password_field :password, hide_label: :true, placeholder: "Password" %>
-		    <%=u.password_field :password_confirmation, hide_label: :true, placeholder: "Confirm Password" %>
-		    <%= u.submit "Join" %>
-			<% end %>
-	    	<br>
-	        <div class="modal-footer">
-	          Already a chef? <a href="/login"> Login here!</a>
-	        </div>
-	   
-	  </div>
+		<div class="modal-content">
+			<div class="modal-header">
+				<h4 class="modal-title">Sign up for Yes!Chef</h4>
+			</div>
+			<div class="modal-body">
+				<%= form_for :user, url: "/signup" do |u| %>
+				<div class="form-group">
+
+					<div class="input-group formfield-space">
+						<%=u.text_field :firstname, hide_label: :true, placeholder: "First name", class: "form-control" %>
+					</div>
+					<div class="input-group formfield-space">
+						<%=u.text_field :lastname, hide_label: :true, placeholder: "Last name", class: "form-control" %>					
+					</div>
+					<div class="input-group formfield-space">
+						<%=u.email_field :email, hide_label: :true, placeholder: "Email", class: "form-control" %>
+					</div>
+					<div class="input-group formfield-space">
+						<%=u.password_field :password, hide_label: :true, placeholder: "Password", class: "form-control" %>
+					</div>
+					<div class="input-group formfield-space">
+						<%=u.password_field :password_confirmation, hide_label: :true, placeholder: "Confirm Password", class: "form-control" %>
+					</div>					
+
+					<div class="modal-footer">
+						<%= u.submit "Join", class: "btn btn-modal" %>
+					</div>
+					<% end %>
+				</div>
+			</div>
+		</div>
 	</div>
 </div>

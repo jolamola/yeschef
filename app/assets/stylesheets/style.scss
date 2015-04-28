@@ -191,9 +191,11 @@ $errorColor: #F22613;
 }
 
 // FIX border radius on recipe new modal field
-.recipe-modal .input-group .form-control:last-child {
+.recipe-modal .input-group .form-control:last-child,
+.signup-modal .input-group .form-control:last-child {
 	border-radius: 4px;
 	margin-bottom: 10px;
+	width: 415px;
 }
 .image {
 	margin-top: 3px;

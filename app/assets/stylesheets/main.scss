@@ -46,41 +46,6 @@ textarea.form-control {
 }
 
 /*****************************************/
-/*****************Carousel****************/
-/*****************************************/
-.car-container {
-	width: 900px;
-	margin-right: auto;
-	margin-left: auto;
-	margin-top: 40px;
-}
-
-.carousel-size {
-	height: 534px
-}
-.carousel-caption {
-	bottom: 360px;
-	left: 85px;
-	text-align: left;
-}
-.center-width {
-	width: 80%;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-/*****************************************/
-/************ Recipe Table ***************/
-/*****************************************/
-.table tr  {
-	cursor: pointer;
-}
-.table > tbody > tr > td {
-	vertical-align: middle;
-}
-
-
-/*****************************************/
 /********* Log In Sign up Modal **********/
 /*****************************************/
 .greenBg {
@@ -91,7 +56,7 @@ textarea.form-control {
 }
 .modal-footer {
 	text-align: left;
-	padding-left: 0px;
+	padding: 15px 0 0 0;
 }
 
 .form-control {
@@ -109,63 +74,4 @@ textarea.form-control {
 }
 .modal-title {
 	color: #493A3A;
-}
-
-/*****************************************/
-/************** NAV BAR ******************/
-/*****************************************/
-.navbar-brand-font {
-	font-family: 'Chelsea Market', cursive;
-	font-size: 30px;
-}
-.navbar-font {
-	font-family: 'Ubuntu', sans-serif;
-	font-size: 16px;
-	color: #493A3A;
-}
-.navbar-default {
-	background-color: #1DA59B;
-}
-.navbar-default .navbar-brand {
-	color: #493A3A;
-}
-.navbar-default .navbar-brand:hover {
-	color: #F1EBDE;
-} 
-.navbar > .container .navbar-brand, 
-.navbar > .container-fluid .navbar-brand {
-	margin-left: -30px;
-}
-.navbar-right {
-	padding-top: 15px
-}
-.navbar-default .navbar-nav > a {
-	color: #493A3A;
-}
-.navbar-default .navbar-nav > a:hover {
-	color: #F1EBDE;
-}
-.navbar-default .navbar-nav > li > a {
-	color: #493A3A;
-}
-.navbar-default .navbar-nav > li > a:hover {
-	color: #F1EBDE;
-}
-.navbarOverride {
-	margin-bottom: 0px;
-	border-right: 0px;
-	border-bottom: 0px;
-	border-left: 0px;
-	border-color: #493A3A;
-	border-width: 2px;
-	border-radius: 0;
-}
-.navbar-default .navbar-toggle {
-	border-color: #493A3A;
-}
-.navbar-default .navbar-toggle .icon-bar {
-	background-color: #493A3A;
-}
-.navbar-default .navbar-toggle:hover {
-	background-color: #F1EBDE;
 }
