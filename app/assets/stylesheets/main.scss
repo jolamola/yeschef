@@ -44,6 +44,11 @@ textarea.form-control {
 #log-in-first {
 	color: #errorColor;
 }
+.center-width {
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
 
 /*****************************************/
 /********* Log In Sign up Modal **********/
@@ -56,7 +61,7 @@ textarea.form-control {
 }
 .modal-footer {
 	text-align: left;
-	padding: 15px 0 0 0;
+	padding-top: 15px;
 }
 
 .form-control {
@@ -75,3 +80,4 @@ textarea.form-control {
 .modal-title {
 	color: #493A3A;
 }
+
