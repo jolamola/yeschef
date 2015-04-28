@@ -1,50 +1,62 @@
-<%= render "partials/navbar" %>
-<div class = "center-width">
+<div id="bg"></div>
 
-	<div>
+<div id="menu" class="hidden">
+	<h3>yes!chef</h3>
+	<% if current_user %>
+	<ul>
+		<li><span class="fa fa-chevron-left">
+			<%= link_to " Back", recipes_path, class: "recipe-menu-link" %>
+		</span></li>
 
-		<!-- sub menu for recipes -->
-		<h1> <strong><%= @recipe.rName %></strong> </h1>
-		<%= link_to "Back", recipes_path %> | 
-		<%= link_to "Edit Info", edit_recipe_path %> | 
-		<%= link_to "Delete Recipe", recipe_path, method: :delete, data: {Confirm: "Your recipe will be permanently deleted"} %>
-		<br>
-		<br>
-	</div>
+		<li><span class="fa fa-pencil">
+			<%= link_to " Edit Info", edit_recipe_path, class: "recipe-menu-link" %>
+		</span></li>
 
+		<li><span class="fa fa-trash-o">
+			<%= link_to " Delete Recipe", recipe_path, class: "recipe-menu-link", method: :delete, data: {Confirm: "Your recipe will be permanently deleted"} %>
+		</span></li>
 
-	<hr>
-
-	<div class = "row">
-	<!-- flash confirmation of recipe add -->
-		<div>
-			<% flash.each do |key, value| %>
-			<div class="alert alert-<%= key %>" role="alert-dismissible">
-				<button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-				<strong><%= value %></strong>
-			</div>
-			<% end %>
-		</div>
-
-		<!-- displays recipe details on show -->
-		<div class = "col-md-5">
-			<br>
-			<tr>
-				<td><%= image_tag @recipe.photo.url(:med), alt: "no image uploaded :(" %></td>
-				<br><br>
-				<td><strong>Description: </strong><%= @recipe.serving_size %></td>
-				<br><br>
-				<td><strong>Serving size: </strong><%= @recipe.ingredient %></td>
-				<br><br>
-				<td><strong>Suggested Equipment: </strong><%= @recipe.instruction %></td><br>
-			</tr>
-		</div>
-
-		
-	</div>
+		<li><a href="/logout">
+			<i class="fa fa-sign-out"></i>&nbsp;Logout
+		</a></li>
+	</ul>
+	<% else %>
+	<h4 style="color:#f22613"> please login </h4> <!-- Message if user is not logged in. FIX: should route to LANDING PAGE -->
+	<% end %>
+	<%= render "partials/recipe" %> <!-- Partial for new recipe modal -->
 </div>
 
+<div id="content">
 
+	<!-- Navbar -->
+	<div id="menubar">
+		<div id="button">
+			<i id="menu-button" href="#menu-button" class="fa fa-bars fa-2x menu-icon"></i>
+		</div>
+		<h3>Chef <%= current_user.firstname %></h3>
+	</div>
 
+	<div class="center-width">
+		<div class="row">
+			<div id="recipe_image" class="col-md-12">
+				<p><%= @recipe.rName %></p>
+				<%= image_tag @recipe.photo.url(:med), alt: "no image uploaded :(" %>
+				<br>
+				<h3>Serving Size: <%= @recipe.serving_size %></h3>
+			</div>
+		</div>
+
+		<div id="recipe_details" class="row">
+			<div class="col-md-6">
+				<h3>Ingredients: </h3>
+				<p><%= simple_format @recipe.ingredient %></p>
+			</div>
+			<div class="col-md-6">
+				<h3>Directions: </h3>
+				<p><%= simple_format @recipe.instruction %></p>
+			</div>
+		</div>
+	</div>
+</div>
 
 

@@ -5,32 +5,38 @@
     <div class="modal-content">
 
       <div class="modal-header">
-        <h4 class="modal-title">Add New Recipe</h4>
+        <h4 class="modal-title recipe-title"><i class="fa fa-cutlery"></i> &nbsp;Add New Recipe</h4>
       </div>
 
       <div class="modal-body">
+        
+        <div class="form-group">
         <%= form_for @recipe do |r| %>
+          <div class="input-group">
+            <strong>Dish Name:</strong>
+            <%= r.text_field :rName, hide_label: :true, size: "100",class: "form-control" %>
+          </div>
+          <div class="input-group">
+            <strong>Serving Size:</strong>
+            <%= r.text_field :serving_size, hide_label: :true, size: "50", class: "form-control formfield-space" %>
+          </div>
+          <div class="input-group">
+            <strong>Ingredients:</strong>
+            <%= r.text_area :ingredient, hide_label: :true, size: "200",class: "form-control formfield-space"%>
+          </div>
+          <div class="input-group">
+           <strong>Directions:</strong>
+           <%= r.text_area :instruction, hide_label: :true, size: "100",class: "form-control formfield-space"%>         
+         </div>
 
-        <strong>Dish Name:</strong>
-        <%= r.text_field :rName, hide_label: :true, class: "recipe-field" %>
+         <strong>Image:</strong>
+         <%= r.file_field :photo, hide_label: :true, class: "formfield-space"%>
 
-        <strong>Serving Size:</strong>
-        <%= r.text_field :serving_size, hide_label: :true %>
+         <%= r.submit 'Done', class: "btn btn-modal" %>
 
-        <strong>Ingredients:</strong>
-        <%= r.text_field :ingredient, hide_label: :true%>
-
-        <strong>Directions:</strong>
-        <%= r.text_field :instruction, hide_label: :true%>
-
-        <strong>Image:</strong>
-        <%= r.file_field :photo, hide_label: :true %>
-
-        <%= r.submit 'Done' %>
-
-        <% end %>
-
-      </div>
-    </div>
-  </div>
+         <% end %>
+       </div>
+     </div>
+   </div>
+ </div>
 </div>
