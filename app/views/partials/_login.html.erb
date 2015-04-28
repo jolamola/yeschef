@@ -7,7 +7,6 @@
       <div class="modal-header">
         <h4 class="modal-title">Log In to Yes!Chef</h4>
       </div>
-
       <div class="modal-body">
         <%= form_for :user, url: '/login' do |f| %>
         <div class="form-group">
@@ -15,16 +14,19 @@
           <div class="input-group formfield-space">
             <span class="input-group-addon"><i class="fa fa-user"></i></span>
             <%= f.text_field :email, hide_label: :true, placeholder: "Email Address", class: "form-control" %>
-          </div>
+          </div><!-- LOGIN FORM FIELD: Email Address -->
+
           <div class="input-group">
             <span class="input-group-addon"><i class="fa fa-lock"></i></span>
             <%= f.password_field :password, hide_label: :true, placeholder: "Password", class: "form-control" %>
-          </div>
-        </div><!-- LOGIN FORM FIELDS -->
+          </div><!-- LOGIN FORM FIELD: Password -->
+
+        </div>
+
         <div class="modal-footer">
           <%=f.submit "Login", class: "btn btn-modal" %>
           <span class="loginFlash"><%= flash[:danger] %></span>
-        </div>
+        </div><!-- Login button -->
 
 
         <% end %>      
@@ -32,3 +34,4 @@
       </div>
     </div>
   </div>
+</div>

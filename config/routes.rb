@@ -13,9 +13,5 @@ get '/recipeHome' => 'recipes#index'
 
 resources :users 
 resources :recipes 
-# do
-# 	resources :components 
 
-
-# 	end
 end

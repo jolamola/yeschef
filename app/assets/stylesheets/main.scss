@@ -1,33 +1,23 @@
-
-
-
-/*****COLORS***********
-629E7E - a green
-9DC568 - lt green
-1DA59B - TURQ 
-1A948B - another turq
-F1EBDE - BEIGE
-493A3A - brownish
-***********************/
-$mainblue: #4A90E2;
+$blue: #4A90E2;
 $primarycolor: #333;
+$beige: #FAFAEE;
+$errorColor: #F22613;
+$mainfont: 'Ubuntu', sans-serif;
+$altfont: 'Chelsea Market', cursive;
 
+/******************************************/
+/***************** General ****************/
+/******************************************/
 body {
 	color: $primarycolor;
-	// background: url("/images/restaurant_icons.png") ;
 	font-family: 'Ubuntu', sans-serif;
 }
-#error-body {
-	display: table;
-	margin: 100px auto;
-}
-
 h1,h2,h3,h4,h5,h6 {
 	margin: 0;
 	padding: 0;
 }
 a {
-	color: $mainblue;
+	color: $blue;
 	&:hover {
 		color: #fff;
 		text-decoration: none;
@@ -37,39 +27,132 @@ hr {
 	border-color: #493A3A;
 	margin-top: -5px;
 }
-textarea.form-control {
-	height: 200px;
-	width: 400px;
-}
-#log-in-first {
-	color: #errorColor;
+.center {
+	margin: 0 auto;
 }
 .center-width {
 	width: 80%;
 	margin-left: auto;
 	margin-right: auto;
 }
+#log-in-first {
+	color: #errorColor;
+}
+
+#error-body {
+	display: table;
+	margin: 100px auto;
+}
+#bg {
+	background: url("/images/restaurant_icons.png") top center;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 2000px;
+	z-index: -1;
+}
+
+/******************************************/
+/************ LANDING PAGE ****************/
+/******************************************/
+#title {
+	color: $blue;
+	font-family: $altfont;
+	font-size: 5em;
+	text-align: center;
+	padding-top: 100px;
+}
+
+#intro {
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 100px;
+}
+/*****************************************/
+/*************** Menu ********************/
+/*****************************************/
+#menubar {
+	width:100%;
+	background-color:$blue;
+	color: #fff;
+	position: fixed;
+	top: 0;
+	z-index: 1;
+}
+
+#menubar h3 {
+	position: absolute;
+	top: 15px;
+	right: 15px;
+}
+#menu,
+#menu_recipe, 
+#content {
+	display:inline;
+}
+#content {
+	width:100%;
+	position: absolute;
+	left: 0px;
+	overflow-x: hidden;
+}
+#menu,
+#menu_recipe {
+	position: fixed;
+	top: 0;
+	background-color: #333;
+	float:left;
+	width: 200px;
+	height: 100%;
+	z-index: 1;
+}
+#menu h3 {
+	color: $blue;
+	text-decoration: none;
+	font-size: 2em;
+	font-weight: bold;
+	margin: 10px 0 10px 10px;
+}
+#menu ul {
+	border-top: 1px solid white;
+	padding-top: 10px;
+	padding-left: 10px;
+}
+#menu ul li {
+	margin: 10px 0;
+}
+#menu ul li a,
+#menu ul li a:focus,
+#menu ul li a:active {
+	color: $blue;
+	list-style: none;
+	font-size: 1.5em;
+	text-decoration: none;
+	&:hover {
+		color: #fff;
+		text-decoration: none;
+	}
+}
+#menu ul li span {
+	color: $blue;
+	list-style: none;
+	font-size: 1.5em;
+	text-decoration: none;
+	&:hover {
+		color: #fff;
+		text-decoration: none;
+	}
+}
 
 /*****************************************/
-/********* Log In Sign up Modal **********/
+/************ Modals & Forms *************/
 /*****************************************/
-.greenBg {
-	background-color: #1DA59B;
-}
 .modal-content {
 	width: 450px;
 }
 .modal-footer {
 	text-align: left;
-	padding-top: 15px;
-}
-
-.form-control {
-	width: 240px;
-}
-.loginFlash {
-	color: red;
-	padding-left: 5px;
+	padding: 15px 0 0 0;
 }
 .modal-dialog {
 	width: 350px;
@@ -78,6 +161,149 @@ textarea.form-control {
 	margin-left: auto;
 }
 .modal-title {
-	color: #493A3A;
+	color: $blue;
+}
+.form-control {
+	width: 240px;
+}
+textarea.form-control {
+	height: 200px;
+}
+.loginFlash {
+	color: red;
+	padding-left: 5px;
+}
+.formfield-space {
+	margin-bottom: 10px;
+}
+// FIX border radius on recipe new modal field
+.recipe-modal .input-group .form-control:last-child,
+.signup-modal .input-group .form-control:last-child {
+	border-radius: 4px;
+	margin-bottom: 10px;
+	width: 415px;
 }
 
+/*****************************************/
+/**************** Buttons ****************/
+/*****************************************/
+.btn-main,
+.btn-main:focus {
+	display: block;
+	width: 200px;
+	padding: 10px 0;
+	background: transparent;
+	font-size: 1.5em;
+	border: 2px solid $blue;
+	text-transform: uppercase;
+	outline: none;
+	box-shadow: inset 0 0 0 0 $blue;
+	-webkit-transition: all linear 0.2s;
+	-moz-transition: all linear 0.2s;
+	transition: all linear 0.2s;
+	&:hover {
+		box-shadow: inset 200px 0 0 0 $blue;
+		color: $beige;
+		outline: none;
+	}
+}
+.btn-modal {
+	color: #fff;
+	background: $blue!important;
+	width: 100px;
+	background: transparent;
+	border: 1px solid $blue;
+	outline: none;
+	&:hover, &:focus {
+		color: $blue!important;
+		background: #fff!important;
+		border-color: $blue;
+		transition: all linear 0.2s;
+		outline: none;
+	}
+}
+.menu-icon {
+	color: $beige;
+	border: 2px solid $beige;
+	padding: 4px 8px;
+	margin: 10px;
+	cursor: pointer;
+	&:hover {
+		color: $blue;
+		background-color: $beige;
+		transition: all linear 0.2s;
+		-webkit-transition: all linear 0.2s;
+		-moz-transition: all linear 0.2s;
+	}
+}
+// Add Recipe button
+#menu ul li button,
+#menu ul li button:focus {
+	background: transparent;
+	color: $blue;
+	font-size: 1.5em;
+	border: none;
+	margin-left: -5px;
+	outline: none;
+	&:hover {
+		color: #fff;
+		text-decoration: none;
+	}
+}
+
+/*****************************************/
+/**************** Recipe *****************/
+/*****************************************/
+.image {
+	margin-top: 3px;
+	margin-bottom: 20px;
+	border: 1px solid #000;
+	box-shadow: 0 3px 9px rgba(0,0,0,.5);
+	&:hover {
+		opacity: .8;
+	}
+}
+#recipe-content {
+	margin-top: 100px;
+}
+
+.recipe-title {
+	color: $blue;
+	font-weight: bold;
+}
+
+#recipe-menu-container h1 {
+	margin-top: 10px;
+}
+
+.recipe_menu_icon {
+	color: $blue;
+}
+#menu ul li span a.recipe-menu-link {
+	font-family: $mainfont;
+	font-size: 1em;
+}
+
+#recipe_image {
+	margin-top: 75px;
+}
+
+#recipe_image p {
+	font-size: 3em;
+	font-weight: bold;
+}
+#recipe_image h3 {
+	font-size: 1.5em;
+}
+#recipe_details {
+	margin-top: 20px;
+}
+
+#recipe_details .col-md-6 h3{
+	font-size: 2em;
+	text-decoration: underline;
+}
+
+#recipe_details .col-md-6 p {
+	font-size: 1.5em;
+}

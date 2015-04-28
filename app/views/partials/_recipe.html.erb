@@ -12,27 +12,33 @@
         
         <div class="form-group">
         <%= form_for @recipe do |r| %>
+
           <div class="input-group">
-            <strong>Dish Name:</strong>
-            <%= r.text_field :rName, hide_label: :true, size: "100",class: "form-control" %>
-          </div>
+            <strong>Recipe Name:</strong>
+            <%= r.text_field :rName, hide_label: :true, class: "form-control" %>
+          </div><!-- Recipe Form Field: Recipe/Dish Name -->
+
           <div class="input-group">
             <strong>Serving Size:</strong>
-            <%= r.text_field :serving_size, hide_label: :true, size: "50", class: "form-control formfield-space" %>
-          </div>
+            <%= r.text_field :serving_size, hide_label: :true, class: "form-control formfield-space" %>
+          </div><!-- Recipe Form Field: Serving Size -->
+
           <div class="input-group">
             <strong>Ingredients:</strong>
-            <%= r.text_area :ingredient, hide_label: :true, size: "200",class: "form-control formfield-space"%>
-          </div>
+            <%= r.text_area :ingredient, hide_label: :true,class: "form-control formfield-space"%>
+          </div><!-- Recipe Form Field: Ingredients -->
+
           <div class="input-group">
            <strong>Directions:</strong>
-           <%= r.text_area :instruction, hide_label: :true, size: "100",class: "form-control formfield-space"%>         
-         </div>
+           <%= r.text_area :instruction, hide_label: :true,class: "form-control formfield-space"%>         
+         </div><!-- Recipe Form Field: Recipe/Dish Name -->
 
          <strong>Image:</strong>
          <%= r.file_field :photo, hide_label: :true, class: "formfield-space"%>
+         <!-- Recipe Form Field: Image Upload Button -->
 
          <%= r.submit 'Done', class: "btn btn-modal" %>
+         <!-- Recipe Form Field: Submit/Done Button -->
 
          <% end %>
        </div>

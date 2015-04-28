@@ -3,24 +3,24 @@
 	<h3>yes!chef</h3>
 	<% if current_user %>
 	<ul>
-		<li><button type="button" data-toggle="modal" data-target=".recipe-modal"><i class="fa fa-plus"></i>&nbsp;&nbsp;Add Recipe</button></li>
-		<li><a href="/logout"><i class="fa fa-sign-out"></i>&nbsp;Logout</a></li>
+		<li><button type="button" data-toggle="modal" data-target=".recipe-modal"><i class="fa fa-plus"></i>&nbsp;&nbsp;Add Recipe</button></li><!-- Add Recipe Link -->
+		<li><a href="/logout"><i class="fa fa-sign-out"></i>&nbsp;Logout</a></li><!-- Logout Link -->
 	</ul>
 	<% else %>
 	<h4 style="color:#f22613"> please login </h4> <!-- Message if user is not logged in. FIX: should route to LANDING PAGE -->
 	<% end %>
 	<%= render "partials/recipe" %> <!-- Partial for new recipe modal -->
-</div>
+</div> <!-- Side Slide General Menu -->
 
 <div id="content">
 
-	<!-- Navbar -->
+	
 	<div id="menubar">
 		<div id="button">
 			<i id="menu-button" href="#menu-button" class="fa fa-bars fa-2x menu-icon"></i>
-		</div>
+		</div><!-- Menu button -->
 		<h3>Chef <%= current_user.firstname %></h3>
-	</div>
+	</div><!-- navbar -->
 
 	<div id="recipe-content">
 
@@ -33,7 +33,7 @@
 				<div class="col-md-4 col-sm-6 col-xs-12">
 					<h4><%= r.rName %></h4>
 					<a href="<%= recipe_path(r) %>"><%= image_tag r.photo.url(:med), class: "image" %></a>
-				</div>
+				</div><!-- Recipe picture and link -->
 
 				<% end %>
 
@@ -43,7 +43,7 @@
 
 
 			</div>
-		</div>
+		</div><!-- Recipes -->
 	</div>
 
 </div>

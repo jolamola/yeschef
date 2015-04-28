@@ -4,33 +4,33 @@
 	<h3>yes!chef</h3>
 	<% if current_user %>
 	<ul>
-		<li><a href="/recipeHome"><i class="fa fa-chevron-left"></i>&nbsp;&nbsp;Back</a></li>
+		<li><a href="/recipeHome"><i class="fa fa-chevron-left"></i>&nbsp;&nbsp;Back</a></li><!-- Button to go back to recipe index/home -->
 
-		<li><button type="button" data-toggle="modal" data-target=".recipe-modal"><i class="fa fa-pencil"></i>&nbsp;Edit Recipe</button></li>
+		<li><button type="button" data-toggle="modal" data-target=".recipe-modal"><i class="fa fa-pencil"></i>&nbsp;Edit Recipe</button></li><!-- Button to edit current recipe -->
 
 		<li><span class="fa fa-trash-o">
 			<%= link_to " Delete Recipe", recipe_path, class: "recipe-menu-link", method: :delete, data: {Confirm: "Your recipe will be permanently deleted"} %>
-		</span></li>
+		</span></li><!-- Button to delete current recipe -->
 
-		<li><a href="/logout"><i class="fa fa-sign-out"></i>&nbsp;Logout</a></li>
+		<li><a href="/logout"><i class="fa fa-sign-out"></i>&nbsp;Logout</a></li><!-- Button to logout -->
 	</ul>
 	<% else %>
 	<h4 style="color:#f22613"> please login </h4> <!-- Message if user is not logged in. FIX: should route to LANDING PAGE -->
 	<% end %>
 	<%= render "partials/recipe" %> <!-- Partial for new recipe modal -->
-</div>
+</div><!-- Side Slide Recipe Menu -->
 
 <div id="content">
 
-	<!-- Navbar -->
 	<div id="menubar">
 		<div id="button">
 			<i id="menu-button" href="#menu-button" class="fa fa-bars fa-2x menu-icon"></i>
-		</div>
+		</div><!-- Menu button -->
 		<h3>Chef <%= current_user.firstname %></h3>
-	</div>
+	</div><!-- Navbar -->
 
 	<div class="center-width">
+
 		<div class="row">
 			<div id="recipe_image" class="col-md-12">
 				<p><%= @recipe.rName %></p>
@@ -38,17 +38,20 @@
 				<br>
 				<h3>Serving Size: <%= @recipe.serving_size %></h3>
 			</div>
-		</div>
+		</div><!-- Current recipe picture and Serving size -->
 
 		<div id="recipe_details" class="row">
+
 			<div class="col-md-6">
 				<h3>Ingredients: </h3>
 				<p><%= simple_format @recipe.ingredient %></p>
-			</div>
+			</div><!-- Current recipe ingredients -->
+
 			<div class="col-md-6">
 				<h3>Directions: </h3>
 				<p><%= simple_format @recipe.instruction %></p>
-			</div>
+			</div><!-- Current recipe directions -->
+
 		</div>
 	</div>
 </div>

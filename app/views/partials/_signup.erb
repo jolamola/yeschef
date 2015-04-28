@@ -11,23 +11,28 @@
 
 					<div class="input-group formfield-space">
 						<%=u.text_field :firstname, hide_label: :true, placeholder: "First name", class: "form-control" %>
-					</div>
+					</div><!-- Signup Form Field: First Name -->
+
 					<div class="input-group formfield-space">
 						<%=u.text_field :lastname, hide_label: :true, placeholder: "Last name", class: "form-control" %>					
-					</div>
+					</div><!-- Signup Form Field: Last Name -->
+
 					<div class="input-group formfield-space">
 						<%=u.email_field :email, hide_label: :true, placeholder: "Email", class: "form-control" %>
-					</div>
+					</div><!-- Signup Form Field: Email -->
+
 					<div class="input-group formfield-space">
 						<%=u.password_field :password, hide_label: :true, placeholder: "Password", class: "form-control" %>
-					</div>
+					</div><!-- Signup Form Field: Password -->
+
 					<div class="input-group formfield-space">
 						<%=u.password_field :password_confirmation, hide_label: :true, placeholder: "Confirm Password", class: "form-control" %>
-					</div>					
+					</div><!-- Signup Form Field: Password Confirmation -->					
 
 					<div class="modal-footer">
 						<%= u.submit "Join", class: "btn btn-modal" %>
-					</div>
+					</div><!-- Signup Form Field: Submit/Join Button -->
+
 					<% end %>
 				</div>
 			</div>
