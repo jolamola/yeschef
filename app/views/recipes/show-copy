@@ -7,6 +7,7 @@
 		<h1> <strong><%= @recipe.rName %></strong> </h1>
 		<%= link_to "Back", recipes_path %> | 
 		<%= link_to "Edit Info", edit_recipe_path %> | 
+		<%= link_to "Add Component", new_recipe_component_path(@recipe) %> | 
 		<%= link_to "Delete Recipe", recipe_path, method: :delete, data: {Confirm: "Your recipe will be permanently deleted"} %>
 		<br>
 		<br>
@@ -40,7 +41,30 @@
 			</tr>
 		</div>
 
-		
+		<!-- displays components of recipe -->
+		<div class = "col-md-7">
+			<h3> Components List:</h3>
+			<% @recipe.components.each do |c|%>
+			<div>
+				<div>
+					<strong>Component: </strong><%= c.cName %>
+					<br>
+					<%= link_to "Edit", edit_recipe_component_path(c.recipe, c) %> | <%= link_to "Delete", recipe_component_path(c.recipe.id, c.id), method: :delete, data: {Confirm: "Your component will be permanently deleted"} %>
+				</div>				
+
+				<ul>
+					Ingredients:
+					<ul><%= simple_format c.ingredient %></ul>
+				</ul>
+				<ul>
+					Directions:
+					<ul><%= simple_format c.direction %></ul>
+				</ul>
+
+				<br>
+			</div>
+			<% end %>
+		</div>
 	</div>
 </div>
 

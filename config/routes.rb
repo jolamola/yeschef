@@ -12,9 +12,10 @@ get '/logout' => 'sessions#destroy', as: :logout
 
 
 resources :users 
-resources :recipes do
-	resources :components 
+resources :recipes 
+# do
+# 	resources :components 
 
 
-	end
+# 	end
 end

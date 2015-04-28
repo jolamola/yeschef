@@ -59,8 +59,7 @@ class RecipesController < ApplicationController
 	# required params to create recipe
 	def recipe_params
 		params.require(:recipe).permit(
-			:rName, :description, :serving_size, :equipment, :photo, component_attributes: 
-			[:cName, :direction, :ingredient])
+			:rName, :serving_size, :ingredient, :instruction, :photo)
 	end	
 
 end
