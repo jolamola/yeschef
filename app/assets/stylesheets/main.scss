@@ -8,6 +8,7 @@ $altfont: 'Chelsea Market', cursive;
 /******************************************/
 /***************** General ****************/
 /******************************************/
+
 body {
 	color: $primarycolor;
 	font-family: 'Ubuntu', sans-serif;
@@ -237,14 +238,15 @@ textarea.form-control {
 	}
 }
 // Add Recipe button
-#menu ul li button,
-#menu ul li button:focus {
+#menu ul li a,
+#menu ul li a:focus {
 	background: transparent;
 	color: $blue;
 	font-size: 1.5em;
 	border: none;
 	margin-left: -5px;
 	outline: none;
+	cursor: pointer; // <button> pushed element to right, changed to a-tag but needs this line to be clickable on ios
 	&:hover {
 		color: #fff;
 		text-decoration: none;

@@ -6,11 +6,11 @@
 	<ul>
 		<li><a href="/recipeHome"><i class="fa fa-chevron-left"></i>&nbsp;&nbsp;Back</a></li><!-- Button to go back to recipe index/home -->
 
-		<li><button type="button" data-toggle="modal" data-target=".recipe-modal"><i class="fa fa-pencil"></i>&nbsp;Edit Recipe</button></li><!-- Button to edit current recipe -->
+		<li><a type="button" data-toggle="modal" data-target=".recipe-modal"><i class="fa fa-pencil"></i>&nbsp;Edit Recipe</a></li><!-- Button to edit current recipe -->
 
-		<li><span class="fa fa-trash-o">
+		<li><a class="fa fa-trash-o">&nbsp;
 			<%= link_to " Delete Recipe", recipe_path, class: "recipe-menu-link", method: :delete, data: {Confirm: "Your recipe will be permanently deleted"} %>
-		</span></li><!-- Button to delete current recipe -->
+		</a></li><!-- Button to delete current recipe -->
 
 		<li><a href="/logout"><i class="fa fa-sign-out"></i>&nbsp;Logout</a></li><!-- Button to logout -->
 	</ul>
