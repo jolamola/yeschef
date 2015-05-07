@@ -30,15 +30,17 @@
 				<% if current_user %>
 				<% @recipes.each do |r| %>
 
+				
 				<div class="col-md-4 col-sm-6 col-xs-12">
-					<h4><%= r.rName %></h4>
-					<a href="<%= recipe_path(r) %>"><%= image_tag r.photo.url(:med), class: "image" %></a>
-				</div><!-- Recipe picture and link -->
-
+					<div class="imageContainer">
+						<h4><%= r.rName %></h4>
+						<a href="<%= recipe_path(r) %>"><%= image_tag r.photo.url(:med), class: "image" %></a>
+					</div><!-- Recipe picture and link -->
+				</div>
 				<% end %>
 
 				<% else %>
-					<h1 id="error-body"> You are not logged in, please log in or sign up!</h1>
+				<h1 id="error-body"> You are not logged in, please log in or sign up!</h1>
 				<% end %>
 
 
