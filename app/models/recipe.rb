@@ -17,6 +17,6 @@ class Recipe
   validates :serving_size, presence: true
   validates :ingredient, presence: true
   validates :instruction, presence: {message: "requires instruction"}
-  validates :photo, presence: {message: "requires photo"} 
+  validates_presence_of :photo, :message => "must be provided"
 
 end

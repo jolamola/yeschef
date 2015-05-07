@@ -25,6 +25,9 @@ class RecipesController < ApplicationController
 		@user = User.find(session[:user_id])
 		@recipe.user_id = @user.id
 		@recipe.save
+		# if @recipe.valid?
+		# 	@recipe.save
+		# 	redirect_to recipe_path(@recipe)
 
 		if @recipe.save
 			redirect_to recipe_path(@recipe)
