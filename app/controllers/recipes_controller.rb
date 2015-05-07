@@ -14,9 +14,9 @@ class RecipesController < ApplicationController
 	end
 
 	# new method for new recipe
-	# def new
-	# 	@recipe = Recipe.new
-	# end
+	def new
+		@recipe = Recipe.new
+	end
 
 	# creates new recipe then redirects to recipe to add components
 	def create
@@ -29,7 +29,8 @@ class RecipesController < ApplicationController
 		if @recipe.save
 			redirect_to recipe_path(@recipe)
 		else
-			render :new
+			flash[:danger]= "photo is required"
+			redirect_to recipes_path
 		end		
 	end
 
