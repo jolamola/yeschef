@@ -14,9 +14,5 @@ class Recipe
   # accepts_nested_attributes_for :components
 
   validates :rName, presence: true, uniqueness: true
-  validates :serving_size, presence: true
-  validates :ingredient, presence: true
-  validates :instruction, presence: {message: "requires instruction"}
-  validates_presence_of :photo, :message => "must be provided"
 
 end
