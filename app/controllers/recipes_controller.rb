@@ -32,7 +32,6 @@ class RecipesController < ApplicationController
 		if @recipe.save
 			redirect_to recipe_path(@recipe)
 		else
-			flash[:danger]= "photo is required"
 			redirect_to recipes_path
 		end		
 	end

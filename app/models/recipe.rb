@@ -13,6 +13,7 @@ class Recipe
   # embeds_many :components
   # accepts_nested_attributes_for :components
 
-  validates :rName, presence: true, uniqueness: true
+  validates :rName, presence: true
+  validates :photo, presence: true
 
 end
