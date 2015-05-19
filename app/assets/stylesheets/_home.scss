@@ -67,18 +67,6 @@ div.login-modal {
 				padding: 15px 0 0 0;
 				input.btn-modal {
 					@include btn-modal;
-					// color: #fff;
-					// background: $blue;
-					// width: 100px;
-					// border: 1px solid $blue;
-					// outline: none;
-					// &:hover, &:focus {
-					// 	color: $blue;
-					// 	background: #fff;
-					// 	border-color: $blue;
-					// 	@include transition(all linear 0.2s);
-					// 	outline: none;
-					// }
 				}
 				span.login-flash {
 					color: red;
