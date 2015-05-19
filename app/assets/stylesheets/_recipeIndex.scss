@@ -1,0 +1,125 @@
+#bg {
+	@extend #bg;
+}
+
+#menu {
+	// display: inline;
+	position: fixed;
+	top: 0;
+	background-color: #333;
+	float:left;
+	width: 200px;
+	height: 100%;
+	z-index: 1;
+	h3 {
+		color: $blue;
+		text-decoration: none;
+		font-size: 2em;
+		font-weight: bold;
+		margin: 10px 0 10px 10px;
+	}
+	ul {
+		border-top: 1px solid white;
+		padding-top: 10px;
+		padding-left: 10px;
+		li {
+			margin: 10px 0;
+			a, a:focus, a:active {
+				color: $blue;
+				list-style: none;
+				font-size: 1.5em;
+				text-decoration: none;
+				cursor: pointer;
+				&:hover {
+					color: #fff;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+#content {
+	width:100%;
+	position: absolute;
+	left: 0px;
+	overflow-x: hidden;
+	div#menubar {
+		width:100%;
+		background-color:$blue;
+		color: #fff;
+		position: fixed;
+		top: 0;
+		z-index: 1;
+		i.menu-icon {
+			color: $beige;
+			border: 2px solid $beige;
+			padding: 4px 8px;
+			margin: 10px;
+			cursor: pointer;
+			&:hover {
+				color: $blue;
+				background-color: $beige;
+				@include transition(all linear 0.2s);
+			}
+		}
+		h3 {
+			position: absolute;
+			top: 15px;
+			right: 15px;
+		}
+	}
+	div#recipe-content {
+		margin-top: 100px;
+		div.imageContainer {
+			height: 300px;
+			width: 300px;
+			a.image {
+				margin-top: 3px;
+				margin-bottom: 20px;
+				border: 1px solid #000;
+				box-shadow: 0 3px 9px rgba(0,0,0,.5);
+				&:hover {
+					opacity: .8;
+				}
+			}
+		}
+		h1#error-body {
+			display: table;
+			margin: 100px auto;
+		}
+
+	}
+}
+
+//recipe modal
+div.recipe-modal {
+	@extend div.login-modal;
+	h4.recipe-title {
+		color: $blue;
+		font-weight: bold;
+	}
+	.form-control:last-child {
+		border-radius: 4px;
+		margin-bottom: 10px;
+		width: 415px;
+	}
+	textarea.form-control {
+		height: 200px;
+	}
+	input.btn-modal {
+		@include btn-modal;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+

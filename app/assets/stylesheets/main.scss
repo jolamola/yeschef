@@ -1,6 +1,4 @@
-@import "var";
-@import "home";
-@import "index";
+@import "var","home","recipeIndex","recipeShow";
 
 /******************************************/
 /***************** General ****************/
@@ -29,17 +27,17 @@ hr {
 	margin: 0 auto;
 }
 .center-width {
-	width: 80%;
-	margin-left: auto;
-	margin-right: auto;
+	// width: 80%;
+	// margin-left: auto;
+	// margin-right: auto;
 }
 #log-in-first {
 	color: #errorColor;
 }
 
 #error-body {
-	display: table;
-	margin: 100px auto;
+	// display: table;
+	// margin: 100px auto;
 }
 
 
@@ -57,41 +55,47 @@ hr {
 /*************** Menu ********************/
 /*****************************************/
 #menubar {
-	width:100%;
-	background-color:$blue;
-	color: #fff;
-	position: fixed;
-	top: 0;
-	z-index: 1;
+	// width:100%;
+	// background-color:$blue;
+	// color: #fff;
+	// position: fixed;
+	// top: 0;
+	// z-index: 1;
 }
 
 #menubar h3 {
-	position: absolute;
-	top: 15px;
-	right: 15px;
+	// position: absolute;
+	// top: 15px;
+	// right: 15px;
 }
 #menu,
 #menu_recipe
-// ,#content 
+,#content 
 {
 	display:inline;
 }
 #content {
-	width:100%;
-	position: absolute;
-	left: 0px;
-	overflow-x: hidden;
+	// width:100%;
+	// position: absolute;
+	// left: 0px;
+	// overflow-x: hidden;
 }
 // #menu,
-#menu_recipe {
-	position: fixed;
-	top: 0;
-	background-color: #333;
-	float:left;
-	width: 200px;
-	height: 100%;
-	z-index: 1;
-}
+
+
+// #menu_recipe {
+// 	position: fixed;
+// 	top: 0;
+// 	background-color: #333;
+// 	float:left;
+// 	width: 200px;
+// 	height: 100%;
+// 	z-index: 1;
+// }
+
+
+
+
 #menu h3 {
 	// color: $blue;
 	// text-decoration: none;
@@ -210,98 +214,98 @@ textarea.form-control {
 	// }
 }
 .menu-icon {
-	color: $beige;
-	border: 2px solid $beige;
-	padding: 4px 8px;
-	margin: 10px;
-	cursor: pointer;
-	&:hover {
-		color: $blue;
-		background-color: $beige;
-		transition: all linear 0.2s;
-		-webkit-transition: all linear 0.2s;
-		-moz-transition: all linear 0.2s;
-	}
+	// color: $beige;
+	// border: 2px solid $beige;
+	// padding: 4px 8px;
+	// margin: 10px;
+	// cursor: pointer;
+	// &:hover {
+	// 	color: $blue;
+	// 	background-color: $beige;
+	// 	transition: all linear 0.2s;
+	// 	-webkit-transition: all linear 0.2s;
+	// 	-moz-transition: all linear 0.2s;
+	// }
 }
 // Add Recipe button
 #menu ul li a,
 #menu ul li a:focus {
-	background: transparent;
-	color: $blue;
-	font-size: 1.5em;
-	border: none;
-	margin-left: -5px;
-	outline: none;
-	cursor: pointer; // <button> pushed element to right, changed to a-tag but needs this line to be clickable on ios
-	&:hover {
-		color: #fff;
-		text-decoration: none;
-	}
+	// background: transparent;
+	// color: $blue;
+	// font-size: 1.5em;
+	// border: none;
+	// margin-left: -5px;
+	// outline: none;
+	// cursor: pointer; // <button> pushed element to right, changed to a-tag but needs this line to be clickable on ios
+	// &:hover {
+	// 	color: #fff;
+	// 	text-decoration: none;
+	// }
 }
 
 /*****************************************/
 /**************** Recipe *****************/
 /*****************************************/
-.recipe-modal .input-group .form-control:last-child {
-	border-radius: 4px;
-	margin-bottom: 10px;
-	width: 415px;
-}
+// .recipe-modal .input-group .form-control:last-child {
+// 	border-radius: 4px;
+// 	margin-bottom: 10px;
+// 	width: 415px;
+// }
 .image {
-	margin-top: 3px;
-	margin-bottom: 20px;
-	border: 1px solid #000;
-	box-shadow: 0 3px 9px rgba(0,0,0,.5);
-	&:hover {
-		opacity: .8;
-	}
+	// margin-top: 3px;
+	// margin-bottom: 20px;
+	// border: 1px solid #000;
+	// box-shadow: 0 3px 9px rgba(0,0,0,.5);
+	// &:hover {
+	// 	opacity: .8;
+	// }
 }
 
 .imageContainer {
-	height: 300px;
-	width: 300px;
+	// height: 300px;
+	// width: 300px;
 }
 #recipe-content {
-	margin-top: 100px;
+	// margin-top: 100px;
 }
 
-.recipe-title {
-	color: $blue;
-	font-weight: bold;
-}
+// .recipe-title {
+// 	color: $blue;
+// 	font-weight: bold;
+// }
 
-#recipe-menu-container h1 {
-	margin-top: 10px;
-}
+// #recipe-menu-container h1 {
+// 	margin-top: 10px;
+// }
 
 .recipe_menu_icon {
-	color: $blue;
+	// color: $blue;
 }
 #menu ul li span a.recipe-menu-link {
-	font-family: $mainfont;
-	font-size: 1em;
+	// font-family: $mainfont;
+	// font-size: 1em;
 }
 
 #recipe_image {
-	margin-top: 75px;
+	// margin-top: 75px;
 }
 
 #recipe_image p {
-	font-size: 3em;
-	font-weight: bold;
+	// font-size: 3em;
+	// font-weight: bold;
 }
 #recipe_image h3 {
-	font-size: 1.5em;
+	// font-size: 1.5em;
 }
-#recipe_details {
-	margin-top: 20px;
-}
+// #recipe_details {
+// 	margin-top: 20px;
+// }
 
 #recipe_details .col-md-6 h3{
-	font-size: 2em;
-	text-decoration: underline;
+	// font-size: 2em;
+	// text-decoration: underline;
 }
 
 #recipe_details .col-md-6 p {
-	font-size: 1.5em;
+	// font-size: 1.5em;
 }

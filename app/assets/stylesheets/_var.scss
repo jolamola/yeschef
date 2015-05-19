@@ -10,3 +10,18 @@ $altfont: 'Chelsea Market', cursive;
 	-moz-transition: $args;
 	transition: $args;
 }
+
+@mixin btn-modal {
+	color: #fff;
+	background: $blue;
+	width: 100px;
+	border: 1px solid $blue;
+	outline: none;
+	&:hover, &:focus {
+		color: $blue;
+		background: #fff;
+		border-color: $blue;
+		@include transition(all linear 0.2s);
+		outline: none;
+	}
+}

@@ -8,7 +8,7 @@
 		<li><a type="button" data-toggle="modal" data-target=".recipe-modal"><i class="fa fa-pencil"></i>&nbsp;Edit Recipe</a></li><!-- Button to edit current recipe -->
 
 		<li><a class="fa fa-trash-o">&nbsp;
-			<%= link_to " Delete Recipe", recipe_path, class: "recipe-menu-link", method: :delete, data: {Confirm: "Your recipe will be permanently deleted"} %>
+			<%= link_to " Delete Recipe", recipe_path, method: :delete, data: {Confirm: "Your recipe will be permanently deleted"} %>
 		</a></li><!-- Button to delete current recipe -->
 
 		<li><a href="/logout"><i class="fa fa-sign-out"></i>&nbsp;Logout</a></li><!-- Button to logout -->
