@@ -25,3 +25,21 @@ $altfont: 'Chelsea Market', cursive;
 		outline: none;
 	}
 }
+
+@mixin btn-main {
+	display: block;
+	width: 200px;
+	padding: 10px 0;
+	background: transparent;
+	font-size: 1.5em;
+	border: 2px solid $blue;
+	text-transform: uppercase;
+	outline: none;
+	box-shadow: inset 0 0 0 0 $blue;
+	@include transition(all linear 0.2s);
+	&:hover {
+		box-shadow: inset 200px 0 0 0 $blue;
+		color: $beige;
+		outline: none;
+	}
+}
