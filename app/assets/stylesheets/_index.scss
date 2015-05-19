@@ -2,3 +2,41 @@
 	@extend #bg;
 }
 
+#menu {
+	position: fixed;
+	top: 0;
+	background-color: #333;
+	float:left;
+	width: 200px;
+	height: 100%;
+	z-index: 1;
+	h3 {
+		color: $blue;
+		text-decoration: none;
+		font-size: 2em;
+		font-weight: bold;
+		margin: 10px 0 10px 10px;
+	}
+	ul {
+		border-top: 1px solid white;
+		padding-top: 10px;
+		padding-left: 10px;
+		li {
+			margin: 10px 0;
+			a, a:focus, a:active {
+				color: $blue;
+				list-style: none;
+				font-size: 1.5em;
+				text-decoration: none;
+				&:hover {
+					color: #fff;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+
+#content {
+	
+}

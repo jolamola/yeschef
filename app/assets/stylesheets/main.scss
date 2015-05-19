@@ -71,8 +71,9 @@ hr {
 	right: 15px;
 }
 #menu,
-#menu_recipe, 
-#content {
+#menu_recipe
+// ,#content 
+{
 	display:inline;
 }
 #content {
@@ -81,7 +82,7 @@ hr {
 	left: 0px;
 	overflow-x: hidden;
 }
-#menu,
+// #menu,
 #menu_recipe {
 	position: fixed;
 	top: 0;
@@ -92,42 +93,42 @@ hr {
 	z-index: 1;
 }
 #menu h3 {
-	color: $blue;
-	text-decoration: none;
-	font-size: 2em;
-	font-weight: bold;
-	margin: 10px 0 10px 10px;
+	// color: $blue;
+	// text-decoration: none;
+	// font-size: 2em;
+	// font-weight: bold;
+	// margin: 10px 0 10px 10px;
 }
 #menu ul {
-	border-top: 1px solid white;
-	padding-top: 10px;
-	padding-left: 10px;
+	// border-top: 1px solid white;
+	// padding-top: 10px;
+	// padding-left: 10px;
 }
 #menu ul li {
-	margin: 10px 0;
+	// margin: 10px 0;
 }
 #menu ul li a,
 #menu ul li a:focus,
 #menu ul li a:active {
-	color: $blue;
-	list-style: none;
-	font-size: 1.5em;
-	text-decoration: none;
-	&:hover {
-		color: #fff;
-		text-decoration: none;
-	}
+	// color: $blue;
+	// list-style: none;
+	// font-size: 1.5em;
+	// text-decoration: none;
+	// &:hover {
+	// 	color: #fff;
+	// 	text-decoration: none;
+	// }
 }
-#menu ul li span {
-	color: $blue;
-	list-style: none;
-	font-size: 1.5em;
-	text-decoration: none;
-	&:hover {
-		color: #fff;
-		text-decoration: none;
-	}
-}
+// #menu ul li span {
+// 	color: $blue;
+// 	list-style: none;
+// 	font-size: 1.5em;
+// 	text-decoration: none;
+// 	&:hover {
+// 		color: #fff;
+// 		text-decoration: none;
+// 	}
+// }
 
 /*****************************************/
 /************ Modals & Forms *************/
