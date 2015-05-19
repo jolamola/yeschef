@@ -4,3 +4,9 @@ $beige: #FAFAEE;
 $errorColor: #F22613;
 $mainfont: 'Ubuntu', sans-serif;
 $altfont: 'Chelsea Market', cursive;
+
+@mixin transition($args...) {
+	-webkit-transition: $args;
+	-moz-transition: $args;
+	transition: $args;
+}

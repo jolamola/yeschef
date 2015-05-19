@@ -1,0 +1,105 @@
+#bg {
+	background: url("/images/restaurant_icons.png") top center;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 2000px;
+	z-index: -1;
+}
+
+.container .row div {
+	h1.home-title {
+		color: $blue;
+		font: {
+			color: $blue;
+			family: $altfont;
+			size: 5em;
+		}
+		text-align: center;
+		padding-top: 100px;
+	}
+	h4.home-desc {
+		text-align: center;
+		margin-top: 10px;
+		margin-bottom: 100px;
+	}
+	button.btn-main, .btn-main:focus {
+		display: block;
+		width: 200px;
+		padding: 10px 0;
+		background: transparent;
+		font-size: 1.5em;
+		border: 2px solid $blue;
+		text-transform: uppercase;
+		outline: none;
+		box-shadow: inset 0 0 0 0 $blue;
+		@include transition(all linear 0.2s);
+		&:hover {
+			box-shadow: inset 200px 0 0 0 $blue;
+			color: $beige;
+			outline: none;
+		}
+	}
+}
+
+// modals - login and signup
+div.login-modal {
+	div.modal-dialog {
+		width: 350px;
+		margin-top: 100px;
+		margin-right: auto;
+		margin-left: auto;
+		div.modal-content {
+			width: 450px;
+			div.modal-header h4.modal-title {
+				color: $blue;
+			}
+			div.modal-body .form-group {
+				.formfield-space {
+					margin-bottom: 10px;
+					input.form-control {
+						width: 380px;
+					}
+				}
+			}
+			div.modal-footer {
+				text-align: left;
+				padding: 15px 0 0 0;
+				input.btn-modal {
+					color: #fff;
+					background: $blue;
+					width: 100px;
+					border: 1px solid $blue;
+					outline: none;
+					&:hover, &:focus {
+						color: $blue;
+						background: #fff;
+						border-color: $blue;
+						@include transition(all linear 0.2s);
+						outline: none;
+					}
+				}
+				span.login-flash {
+					color: red;
+					padding-left: 5px;
+				}
+			}
+		}
+	}
+}
+
+div.signup-modal {
+	@extend div.login-modal;
+	// FIX input fields for signup modal - class from inspector
+	.input-group .form-control:last-child {
+		border-radius: 4px;
+		width: 380px;
+	}
+}
+
+
+
+
+
+
+
